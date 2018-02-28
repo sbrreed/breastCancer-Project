@@ -1,14 +1,10 @@
-//// This is is a test edit
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Cost of Cancer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, max-width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quatrocentro">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:Regular,Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -16,600 +12,615 @@
 
 
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mediaQueries.css">
 
     <script src="https://use.fontawesome.com/ab12422872.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+</head>
 
-    <body data-spy="scroll" data-target="#scrollingNav" data-offset="15">
+<body>
+    <div id="masterFlex-container">
 
-        <div class="container-fluid" id='landingpage'>
-            <div class="row" id='introrow'>
-                
-                    <div id='header'>
-                        <img src="../media/CostofCancer3.png" width=700px>
-                    </div>
-                    <div id="intro">
-                        <div id='introtext'>
-                            <h1 id='landingPagetitle'>The emotional and physical toll of Breast Cancer is well known...</h1>
-                            <p class='introtext'>But what about the financial impact? A diagnosis of cancer is associated with a
-                                <a href='http://www.nbcnews.com/id/51893912/ns/health-cancer/t/cancer-increases-bankruptcy-risk-even-insured/#.Wh75y0trzOQ'
-                                    title='NBC News' class='accent2' target="_blank">2.65 times</a> increased risk of bankruptcy. How can a person heal effectively when they're
-                                worried how they'll pay for their treatment or if they're going to
-                                <span class='accent2'>loose their health insurance?</span>
-                                <br>
-                                <br> And if they survive the cancer but end up broke, are they really healed?
-                            </p>
-                            <audio autoplay controls loop>
-                                <source src='../media/Podington_Bear_-_Senseless.mp3' type='audio/mpeg'>
-                            </audio>
-                        </div>
-                    </div>
-                
+        <div id='header'>
+            <div style="flex:1"></div>
+            <div style="flex:10" id="imgDiv">
+                <img src="media/CostofCancer3.png" class="FullSizeimage">
+            </div>
+            <div style="flex:1"></div>
+        </div>
+        <div id="intro">
+            <div id='introtextDiv'>
+                <h1 id='landingPagetitle'>The emotional and physical toll of Breast Cancer is well known...</h1>
+                <p class='introtext'>But what about the financial impact? A diagnosis of cancer is associated with a
+                    <a href='http://www.nbcnews.com/id/51893912/ns/health-cancer/t/cancer-increases-bankruptcy-risk-even-insured/#.Wh75y0trzOQ'
+                        title='NBC News' class='accent2' target="_blank">2.65 times</a> increased risk of bankruptcy. How can a person heal effectively when they're worried how
+                    they'll pay for their treatment or if they're going to
+                    <span class='accent2'>loose their health insurance?</span>
+                    <br>
+                    <br> And if they survive the cancer but end up broke, are they really healed?
+                </p>
+                <!-- <audio autoplay controls loop>
+                    <source src='media/Podington_Bear_-_Senseless.mp3' type='audio/mpeg'>
+                </audio> -->
+            </div>
+        </div>
+        <!--end intro div-->
+
+        <!---Navigation bar-->
+        <div id='sidebar' class='sidebar'>
+            <ul class='nav'>
+                <li>
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#diagnosis">Diagnosis</a>
+                </li>
+                <li>
+                    <a href="#savingsRates">Savings</a>
+                </li>
+                <li>
+                    <a href="#FinancialAssistance" class='active'>Financial Assistance</a>
+                </li>
+                <li>
+                    <a href="#costOfpharmaceuticals">Cost of Pharmaceuticals</a>
+                </li>
+                <li>
+                    <a href="#copingMechanisms">Coping Mechanisms</a>
+                </li>
+                <li>
+                    <a href="#outcome">Outcome</a>
+                </li>
+                <li>
+                    <a href="#solutions">Solutions</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class='content'>
+            <button class='navButton'>
+                <i class='material-icons'>menu</i>
+            </button>
+
+            <div class="container-column" id="introduction">
+                <p class="articleText">
+                    The financial impacts associated with breast cancer, and other cancers alike, effect all patients but are especially impactful
+                    on the lower middle class. They are a portion of the population who earn to much to be covered by medicaid
+                    but don't earn enough to have the savings necessary to weather the costs and financial losses associated
+                    with a drawn out treatment regimen. With heath insurance tied to their jobs, a job loss during treatment-
+                    either related to the illness or simply bad timing- can cause a financial spiral into bankruptcy.
+                </p>
+                <p class="articleText">
+                    Even with insurance intact, the additional costs associated with being sick, such as over the counter medication, wigs, etc.,
+                    coupled with lost wages from having to take time off for treatment and rest, can quickly deplete a family's
+                    meager savings to zero.
+                </p>
+                <div class="rightImageContainer">
+                    <p class=" articleText">
+                        <img src='media/chemoBill-small.png' class='chemoBill'> The skyrocketing costs of pharmaceuticals are a major culprit in the financial burden to the patient.
+                        Cancer pharmaceuticals are getting steadily more expensive but the improvements in life expectancy
+                        are not nearly keeping pace. In a study of 71 drugs to treat solid tumors the median improvement
+                        in progression free survival was just 2.3 months. Pharmaceutical companies claim that they need the
+                        extra income for R&D yet regularly pocket double digit profits greater than the finance industry.
+                        The money they do reinvest in the company usually ends up more in marketing budgets than R&D budgets.
+                        Pharmacuetical companies, instead, rely on government funding for R&D. The image shown was sent to
+                        me by a woman I interviewed for this article. It is for just three weeks of her treatment. While
+                        the bottom line indicates that she's only responsible for $17.65, were her husband to loose his employer
+                        sponsored insurance, they would be responsible for the entire amount.
+
+                    </p>
                 </div>
-            </div> 
-            <br>
-
-            <div class="container-fluid">
-
-                <div class="row">
-                    <nav class="col-md-2" id="scrollingNav">
-                        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="1200">
-                            <li>
-                                <a href="#introduction">Introduction</a>
-                            </li>
-                            <li>
-                                <a href="#diagnosis">Diagnosis</a>
-                            </li>
-                            <li>
-                                <a href="#savingsRates">Savings</a>
-                            </li>
-                            <li>
-                                <a href="#FinancialAssistance">Financial Assistance</a>
-                            </li>
-                            <li>
-                                <a href="#costOfpharmaceuticals">Cost of Pharmaceuticals</a>
-                            </li>
-                            <li>
-                                <a href="#copingMechanisms">Coping Mechanisms</a>
-                            </li>
-                            <li>
-                                <a href="#outcome">Outcome</a>
-                            </li>
-                            <li>
-                                <a href="#solutions">Solutions</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-                    <div class="col-md-10">
-                        <div id="introduction">
-                            <div class='media'>
-                                <div class='media-left'>
-                                    <img src='../media/couple.png' id='karinaAndtom' width=700px>
-                                </div>
-                                <div class='media-body'>
-                                    <h1 class='media-heading'> Meet Karina and Tom</h1>
-                                    <p id='peopleText'> Karina and Tom live in Florida and have two kids ages 10 and 14. Karina is 45 and works
-                                        part time in administration at a Law Firm. The other half of her time she's taking
-                                        care of her kids, volunteering with local organizations and caring for her aging
-                                        mother. Tom is 43 years old and works as an engineer at a construction company. Construction
-                                        is down lately and he's been worried he may loose his job. His company just had company-wide
-                                        paycuts due to the downturn. He's been thinking of trying to find another job. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="diagnosis">
-                            <h1 class='sectionTitle'>Diagnosis</h1>
-                            <div class='media video' id='diagnosis1'>
-                                <iframe src="https://player.vimeo.com/video/238994581" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                    allowfullscreen></iframe>
-                            </div>
-
-                            <h1 class='chartTitle' id="cancerTitle">Breast Cancer Rates in the US</h1>
-                            <p class='explantextsmall' id='cancerexplan'>Breast Cancer rates among older women fell in the early 2000s but have lately started to rise
-                                again.
-                                <br> Rates for younger women have stayed unfortunately level.
-                            </p>
-
-                            <div class="row">
-                                <div class="col-sm-2"></div>
-                                <div class="col-sm-8" id='cancerRatesChart'>
-                                    <svg id="lineChart" width='700' height='500'></svg>
-                                </div>
-                                <div class="col-sm-2" id='chart_buttons'>
-                                    <input type='button' class='filterButton' name='over50button' value='Over 50' onclick='filterOver50()'>
-                                    <input type='button' class='filterButton' name='under50button' value='Under 50' onclick='filterUnder50()'>
-                                    <input type='button' class='filterButton' name='resetbutton' value='All Ages' onclick='resetGraphic()'>
-                                </div>
-                                <!-- <div class="col-sm-2"></div> -->
-                            </div>
-
-
-
-                            <!--End Cancer Rates Chart-->
-
-
-
-
-                            <div class='video'>
-                                <iframe src="https://player.vimeo.com/video/238995961" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                    allowfullscreen></iframe>
-                            </div>
-                            <br>
-                            <br>
-                            <div id=insuredRates class='text'>
-                                <h1 class='chartTitle'>Insured Rates among Americans in 2016</h1>
-                                <p class='explantextsmall'> Nearly
-                                    <span class='accent2'> half </span> of all American's insurance is tied to their
-                                    <span class='accent2'>workplace.</span>
-                                    Insurance plans vary significantly from one to the next. Further, Medicare and Medicaid also differ in how they cover the
-                                    costs of cancer. Astonishingly, 9% of all Americans had no insurance coverage. That's
-                                    <span class='accent2'> 28 Million </span> people who would need to pay out of pocket for their cancer treatment.
-                                </p>
-                                <div id='insuredratesimg'>
-                                    <img id='insuredRatesChart' src='../media/insuredRatesChart.png' width='600px'>
-                                    <p>source: Kaiser Family Foundation</p>
-                                </div>
-                                <p class="explantext" style='margin-bottom:10px'>
-                                    Karina and Tom are lucky enough to have insurance through his job for now. They pay
-                                    <span class="accent2">$4,378</span>
-                                    per year in premiums and have a
-                                    <span class="accent2">$2,811</span> deductible. They are also responsible for the various
-                                    <span class="accent2">copayments</span> the insurance company requires each time they see a doctor. While they're
-                                    both working, they can afford this amount. But now that Karina is sick she's had to cut
-                                    back on her hours and there are more expenses. Their insurance plan has a life-time cap
-                                    on out-of-pocket expenses but that doesn't cover the:
-                                </p>
-                                <ul class='bodylist-left' style='margin-top:0'>
-                                    <li>Travel</li>
-                                    <li>Nonprescription medications</li>
-                                    <li>Extra childcare </li>
-                                    <li>Lost wages </li>
-                                    <li>Special Diets </li>
-                                    <li>Wigs and prosthetics</li>
-                                </ul>
-                                <br>
-                                <br>
-                                <br>
-                            </div>
-                            <!--End Insured Rates-->
-                            <div id='savingsRates'>
-                                <h1 class='sectionTitle' style='padding-bottom:30px'>Do Americans Have Enough In Savings to Cover the Costs of Cancer?</h1>
-                                <br>
-                                <div class="row align-items-center align-self-center">
-                                    <div class="col-md-6 savingsSubLeft" style>
-                                        <p class='explantextsmall' style='margin-right:50px; text-align:right'>
-                                            The overall cost to a patient and her family
-                                            <br> varies dramatically depending on</p>
-                                    </div>
-                                    <div class="col-md-6 savingsSubRight">
-                                        <ul class='bodylist' style='text-align:left'>
-                                            <li>Insurance Status</li>
-                                            <li>Location</li>
-                                            <li>Race</li>
-                                            <li>Stage and Type of Cancer</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <p class="explantextsmall">A
-                                    <a href='http://ascopubs.org/doi/full/10.1200/jco.2013.53.0956' target="_blank" title='Long Term Financial Burden of Breast Cancer'>
-                                        study</a> of women with breast cancer in LA from 2005 to 2007, who had health insurance
-                                    of some kind, found:
-                                </p>
-                                <p class="explantextsmall">
-                                    <span class='accent3'>35%</span> had out of pocket expenses greater than $2000</p>
-                                <p class="explantextsmall">
-                                    <span class='accent3'>12%</span> reported increased debt due to their treatment</p>
-                                <p class="explantextsmall">
-                                    <span class='accent3'>5%</span> had their utilities turned off because of upaid bills</p>
-
-                                <br>
-                                <p class='explantextsmall' style='text-align:left; margin-left:200px;'>In 2017 the average American had less than
-                                    <span class='accent3'>$1000</span> in savings.
-                                    <br> Karina and Tom, like 39% of Americans, have very little in savings. They currently have
-                                    just under $1000 in savings and were hoping to start putting away more as their kids
-                                    get closer to college.The added health care expenses they experience will need to be
-                                    paid for out of his wages, her reduced hours and, likely, debt. </p>
-
-                                <h1 id="savingschartTitle">American Savings Rates</h1>
-                                <svg id="savingsChart" width="800" height="500"></svg>
-                                <p>Source:
-                                    <a href='https://www.gobankingrates.com/saving-money/half-americans-less-savings-2017/' target="_blank">
-                                        Go Banking Rates</a>
-                                </p>
-                                <br>
-                                <br>
-                                <br>
-                            </div>
-                            <!--End SavingsRates-->
-                        </div>
-                        <!--End diagnosis-->
-
-                        <div id='FinancialAssistance'>
-                            <h1 class='sectionTitle'>Financial Assistance</h1>
-                            <h1 class='chartTitle'>Meeting with the Councelor</h1>
-
-                            <p class='explantextsmall'>Many hospitals have a councelor who meets with patients to help them deal with the emotional
-                                and financial burdens of their cancer treatment.</p>
-
-                            <div class='media video' id='councelor1'>
-                                <iframe src="https://player.vimeo.com/video/240049114" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div class='explantext' id='changingJobs'>
-                                <p> In a
-                                    <a href='http://ascopubs.org/doi/full/10.1200/jco.2013.53.0956' target="_blank" title='Long Term Financial Burden of Breast Cancer'>
-                                        study</a> of breast cancer patients,
-                                    <span class='accent2'> 53%</span> reported that it was important to avoid changing jobs because of worry about
-                                    losing health insurance.
-                                    <span class='accent2'> 25%</span> said they would look for a new job only if they could be assured of comparable
-                                    benefits.
-                                </p>
-                            </div>
-
-                            <h1 class='chartTitle'>Charitable Donations</h1>
-                            <p class='explantextsmall'>Councelors help patients find charitable donations- a lifeline for many patients. Even those
-                                with insurance, often need help to cover the added costs of the disease like extra childcare,
-                                help with housekeeping, lost wages for time they had to take off work, etc.
-                            </p>
-                            <div class='media video' id='councelor2'>
-                                <iframe src="https://player.vimeo.com/video/240062213" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                    allowfullscreen></iframe>
-                            </div>
-                            <p class='explantext'> While receving her chemo treatment, Karina must use the time to fill out applications to charitable
-                                organizations for financial aid.
-                            </p>
-                            <div id='chemoTreatment' class='media video'>
-                                <iframe src="https://player.vimeo.com/video/242397301?autoplay=1&loop=1&autopause=0" width="1000" height="563" frameborder="0"
-                                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <!--End Financial Assistance-->
-                        <div id='costOfpharmaceuticals'>
-                            <h4 class='sectionTitle' id='costOfPharmaTitle' style='padding-bottom:30px'>The Cost of Pharmaceuticals</h4>
-                            <p class="explantextsmall" style='margin-left:200px'>The cost of pharmaceuticals is a major component of the overall cost of healthcare today. For
-                                patients diagnosed with later stage cancers, chemotherapy accounts for the majority of their
-                                insurance-covered healthcare costs, especially after year one of treatment.
-                            </p>
-                            <div id='costofMedicine'>
-                                <img src='../media/pharmaLayout-sized.png' width=100%>
-                            </div>
-
-                        </div>
-                        <!--End Cost of Pharma-->
-                        <div id='copingMechanisms'>
-                            <div id="gradsection">
-                                <h1 class='sectionTitle' style='color:#ffffff'>Financial Coping Mechanisms</h1>
-                                <div class='video'>
-                                    <iframe src="https://player.vimeo.com/video/244045869" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                        allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            <p class="explantextsmallMargin">Karina and Tom will need to either stay on Cobra insurance or shop for insurance on the exchange
-                                under the Affordable Care Act. If they elect to stay on Cobra they will be responsible for
-                                the full $16,009
-                                <a href='http://www.commonwealthfund.org/publications/issue-briefs/2016/oct/slowdown-in-employer-insurance-cost-growth'
-                                    title='The Commonwealth Fund'>
-                                    annual premium</a> that Tom's employer used to pay. Cobra will also only cover them for
-                                <a href='https://www.blr.com/HR-Employment/Benefits-Leave/COBRA-Health-Insurance-Continuation-in-Florida'
-                                    title='Florida Cobra Information'>18 months.</a>
-                                <br>
-                                <br> Under the Affordable Care Act they, luckily, cannot be denied insurance on the open market
-                                because of Karina's pre-existing condition. If they do decide to look for insurance on the
-                                insurance exchange in Florida, however, they will be in for
-                                <span class="accent2">$555 per month</span> for the premiums for a
-                                <a href='https://www.kff.org/interactive/subsidy-calculator/#state=fl&zip=32218&income-type=dollars&income=20000&employer-coverage=0&people=4&alternate-plan-family=individual&adult-count=2&adults%5B0%5D%5Bage%5D=45&adults%5B0%5D%5Btobacco%5D=0&adults%5B1%5D%5Bage%5D=43&adults%5B1%5D%5Btobacco%5D=0&child-count=2&children%5B0%5D%5Bage%5D=10&children%5B0%5D%5Btobacco%5D=0&children%5B1%5D%5Bage%5D=14&children%5B1%5D%5Btobacco%5D=0'
-                                    title='Kaiser Family Foundatiion'>
-                                    middle of the road plan</a>. Additionally they will need to cover the
-                                <span class="accent2">
-                                    $4,000</span> deductible plus the
-                                <span class="accent2">$11,700</span> out-of-pocket limit for the year. This is after the subsidies provided under
-                                the ACA.
-                                <br>
-                                <br> Tom's unemployment will
-                                <a href='https://eligibility.com/unemployment/florida-fl' target="_blank">
-                                    max out</a> at
-                                <span class="accent2">$1,100</span> per month.
-                            </p>
-                            <br>
-                            <br>
-                            <h1 style='text-align:center'>Karina and Tom's Family
-                                <br> Monthly Budget</h1>
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered" id='budget'>
-                                            <thead>
-                                                <th>Income</th>
-                                                <th>Expense</th>
-                                                <th>Amount</th>
-                                            </thead>
-                                            <tr>
-
-                                                <td>TOM'S
-                                                    <br> UNEMPLOYMENT</td>
-                                                <td></td>
-                                                <td class='center'>$1,100</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>KARINA'S
-                                                    <br> EARNINGS</td>
-                                                <td></td>
-                                                <td class='center'>$600</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-home"></span> HOUSING</td>
-                                                <td class='center'>-$935</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-apple"></span> FOOD</td>
-                                                <td class='center'>-$782</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <i class="material-icons">directions_car</i> TRANSPORTATION</td>
-                                                <td class='center'>-$608</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <i class="material-icons">local_hospital</i> HEALTH INSURANCE</td>
-                                                <td class='center'>-$555</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <i class="material-icons">local_hospital</i> HEALTH EXPENSES
-                                                    <br>(non insurance)</td>
-                                                <td class='center'>-$200</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <i class="material-icons">local_offer</i> OTHER NECESSITIES</td>
-                                                <td class='center'>-$829</td>
-                                            </tr>
-                                            <tr>
-
-                                                <td></td>
-                                                <td>
-                                                    <i class="material-icons">attach_money</i> TAXES</td>
-                                                <td class='center'>-$502</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan='2' style='text-align:right' class='total accent2'>TOTAL</td>
-                                                <td class='total accent2 center'>$-2,774</td>
-                                            </tr>
-                                        </table>
-                                        <p>Source: http://www.epi.org/resources/budget/ (Jacksonville, FL)</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3"></div>
-                            </div>
-                            <p class="explantext2">Their meager savings are shot. Tom's out of work. Karina's going to need to stay home to recover
-                                from her double mastectomy and reconstruction.
-                                <span class='accent2'> What do they do? </span>
-                            </p>
-                            <p class="explantextsmallMargin">
-                                Women, and their families, deal with the financial burden of treatment in different ways depending on their situation. All
-                                the coping mechanisms are impactful on the patient and her family and distract from the real
-                                work of healing and surviving.
-                            </p>
-
-                            <p class="explantextsmallMargin">
-                                <span class='accent2'>Some common ways that women and their families cope are:</span>
-                            </p>
-                            <!-- <img src='../media/copingMechanism.png' width=100% style='margin-left:25px'> -->
-                            <div id='startfade1'></div>
-                            <div id='copingMechanismslist'>
-                                <p class="element">Obtain samples from doctor</p>
-                                <p class="element">Shop around at pharmacies for the lowest prices</p>
-                                <p class="element">Spread out clinic or chemo appointments</p>
-                                <p class="element">Ask doctor for less expensive medication</p>
-
-                                <p class="element">Purchase over-the-counter medications to replace prescriptions</p>
-
-                                <p class="element">Reduce spending on basics like food and clothing</p>
-                                <p class="element">Borrow money or use credit to pay for medications</p>
-
-                                <p class="element">Use all or a portin of savings to pay for cancer care</p>
-
-                                <p class="element">Fill only part of the prescription</p>
-                                <p class="element">Choose one doctor over another for price</p>
-
-                                <p class="element">Decide not to have recommended test</p>
-
-                                <p class="element">Reduce spending on leisure activities like vacations, eating out or movies</p>
-                                <p class="element">Don't fill the prescription</p>
-
-                            </div>
-                            <p class="explantextsmallMargin">
-                                Failing to adhere to the recommended treatment program can reduce its efficacy and prolong the disease. Rest and leisure
-                                activities during and after cancer treatment should not be a luxury and are critical to
-                                <span class='accent2'>reducing stress
-                                </span> which is
-                                <a href='http://www.apa.org/helpcenter/stress.aspx' target="_blank" title='American Psychological Association'>correlated</a> with improved health.
-                            </p>
-                        </div>
-                        <!--End Lost Wages-->
-                        <!--Begin Outcome-->
-                        <div id="outcome">
-                            <hr>
-                            <h1 class='sectionTitle'> So, what happens to Karina and Tom?</h1>
-                            <div class='media'>
-                                <div class='media-left'>
-                                    <img src='../media/couple.png' id='karinaAndtom' width=500px>
-                                </div>
-                                <div class='media-body'>
-
-                                    <p id='peopleText'> Karina and Tom are a fictional couple, but they are based on real women and their families.
-                                        Millions of women and their families face this question every day. Do they go into
-                                        debt? Do they sell their house? Do they declare bankruptcy?
-                                        <br>
-                                        <br>
-                                        <span class="accent2">What would you do?</span>
-                                        <br>
-                                        <br> Karina will survive her bout with cancer. She will recover physically but the cancer
-                                        could still come back any time. For a very long time, as long as their insurance
-                                        is tied to their jobs, Karina and Tom's careers will be inextricably linked to the
-                                        need for health insurance. As long as the ever increasing costs of pharmaceuticals
-                                        are passed onto the insurance consumer, Karina and Tom will not likely be able to
-                                        afford insurance on the private market. </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--Begin Solutions-->
-                        <div id='solutions'>
-
-
-                            <h1 class='sectionTitle'>Solutions</h1>
-                            <p class="explantextsmallMargin">There are many factors that contribute to the financial impact of breast cancer. Policy solutions
-                                have been proposed to address a variety of them.</p>
-                            <h1 class='left accent3'>The Cost of Medications</h1>
-                            <p class="explantextsmallMargin"> The lion's share of cost to treat breast cancer comes down to the
-                                <span class='accent3'>cost of medications</span>. Pharmaceutical companies use the patents they hold on the cancer
-                                medications to
-                                <span class='accent3'>protect the prices they charge</span>.
-                                <p class="explantextsmallMargin">Extensive research has been conducted to study how to reduce the stranglehold while continuing
-                                    to encourage innovation
-                                </p>
-                                <p class="explantextsmallMargin">Some solutions that have been proposed are</p>
-                                <ul class='bodylist-left' style='margin-left:300px'>
-                                    <li>
-                                        <a href='http://delinkage.org/' target="_blank" title='Delinkage.org'>Delinkage</a>
-                                    </li>
-                                    </li>
-                                    <li>
-                                        <a href='https://www.innovationpolicyplatform.org/content/patent-pools-and-antitrust' target="_blank" title='Innovation Policy Platform'>
-                                            Patent Pooling</a> (watch a great video about it
-                                        <a href='https://www.ted.com/talks/ellen_t_hoen_pool_medical_patents_save_lives' target="_blank" title='TED.com'>here</a>)
-                                    </li>
-                                    <li>Allow Medicare to negotiate drug prices as Medicaid and all other insurance companies
-                                        are allowed to
-                                    </li>
-                                    <li>Allow drugs to be imported from countries where they are sold at reduced prices</li>
-                                    <li>Find even more information about the issue of pharmaceutical patents
-                                        <a href='http://accesstomedicines.org/access-to-medicines' target="_blank" title='Access To Medicines'>here</a>
-                                    </li>
-                                </ul>
-                                <br>
-                                <h1 class='accent3'>Health Insurance</h1>
-                                <p class="explantextsmallMargin">As with the cost of pharmaceuticals, the issue of health insurance is complicated. Throughout
-                                    this research, however, two questions consistently floated to the top.
-                                </p>
-                                <p class="explantextsmallMargin" style='margin-left:200px'> Why should a person fighting to survive cancer feel that they have to work just to keep their
-                                    insurance?
-                                </p>
-                                <p class="explantextsmallMargin" style='margin-left:200px'> Why should your health be tied to your job?</p>
-                                <p class="explantextsmallMargin"> A solution to this problem is
-                                    <span class='accent3'>universal healthcare (single-payer)</span>- health insurance provided by the goverment
-                                    to all citizens. All citizens are, therefore, guaranteed the right to healthcare. This
-                                    would allow the the government to negotiate with pharmaceutical companies as one large
-                                    block instead of individual health insurers negotiating piecemeal. The government already
-                                    negotiates with the pharmaceutical companies through Medicaid but at a much smaller volume.
-                                    <br>
-                                    <br> Learn more about universal healthcare
-                                    <a href='http://www.healthpaconline.net/universal-health-care.htm' target="_blank" title='HealthPAConline.net'>here</a>
-                                    or
-                                    <a href='http://www.pnhp.org/facts/what-is-single-payer' target="_blank" title='Physicians for A National Health Program'>here</a>.
-                                    <br> Learn more about how America is the only industrialized country without single-payer
-                                    healthcare
-                                    <a href='https://www.theatlantic.com/international/archive/2012/06/heres-a-map-of-the-countries-that-provide-universal-health-care-americas-still-not-on-it/259153/'
-                                        target="_blank" title='The Atlantic'>
-                                        here.</a>
-                                </p>
-                                <br>
-                                <h1 class='accent3'> What can you do? </h1>
-                                <p class="explantextsmallMargin">Contact your elected officials and call for more consideration of the solutions listed here.
-                                    It's only through the voice of the citizens that the elected officials are guided on
-                                    the right path.</p>
-                                <br>
-                                <p class="explantextsmallMargin accent3">Find out how to contact your elected officials
-                                    <a href='http://act.commoncause.org/site/PageServer?pagename=sunlight_advocacy_list_page' target="_blank" title='Common Cause'>here</a>
-                                </p>
-                        </div>
-                        <!--End Solutions-->
-                        <div id="sources">
-                            <p>Sources for the Cost of Pharmaceutical Section:
-                                <br>
-                                <a href='https://www.nature.com/articles/nrclinonc.2017.31' target="_blank">The High Price of AntiCancer Drugs: origins, implications, barriers, solutions</a>
-                                <br>
-                                <a href='http://www.cancernetwork.com/her2-positive-breast-cancer/pertuzumab-not-cost-effective-metastatic-her2-positive-breast-cancer'
-                                    target="_blank">
-                                    Pertuzumab Not Cost Effective in Metastatic HER2-Positive Breast Cancer </a>
-                                <br>
-                                <a href='https://www.forbes.com/sites/liyanchen/2015/09/23/the-most-profitable-industries-in-2015/#3a2c031a6b73'
-                                    target="_blank">
-                                    Most Profitable Industries in 2015</a>
-                                <br>
-                                <a href='https://www.washingtonpost.com/news/wonk/wp/2015/02/11/big-pharmaceutical-companies-are-spending-far-more-on-marketing-than-research/?utm_term=.ee1435c49a5f'
-                                    target="_blank">
-                                    Big pharmaceutical companies are spending far more on marketing than research</a>
-                            </p>
-
-                        </div>
-
-                    </div>
+                <p class="articleText">
+                    The fear and stress associated with the financial impacts of the disease affect nearly all patients. Stress is well known
+                    to inhibit healing. Employer tied health insurance coupled with skyrocketing costs of medicine lead to
+                    a toxic financial situation for patients and their families.
+                </p>
+                <div class="leftImageContainer">
+                    <img src='media/couple.png' id='karinaAndtom'>
+                    <p class=" articleText">
+                        Karina and Tom live in Florida and have two kids ages 10 and 14. Karina is 45 and works part time in administration at a
+                        Law Firm. The other half of her time she's taking care of her kids, volunteering with local organizations
+                        and caring for her aging mother.
+                        <br>
+                        <br>Tom is 43 years old and works as an engineer at a construction company. Construction is down lately
+                        and he's been worried he may loose his job. His company just had company-wide paycuts due to the
+                        downturn. He's been thinking of trying to find another job.
+                    </p>
                 </div>
             </div>
-            <footer>
-                <div class="container-fluid">
-                    <div class="col-md-12">
-                        <ul class="social-network social-circle">
-                            <li>
-                                <a href="#" class="icoFacebook" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="icoTwitter" title="Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="icoGoogle" title="Google +">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </li>
+
+            <div class='container-horizontal budgetChartwrapper'>
+                <div style='max-width:500px;'>
+                    <p class="articleText">This is Karina and Tom's pre-illness budget breakdown. Tom makes a good wage and they have managed to
+                        keep their expenses low. They tend to spend their remaining money on travel and leisure activities.</p>
+                </div>
+                <div class="budgetChart-div">
+                    <canvas class="budgetChart" id='budgetChart1'></canvas>
+                    <p class='chartSource'>Source: http://www.epi.org/resources/budget/ (Jacksonville, FL)</p>
+                </div>
+
+            </div>
+
+            <!--end intro container div-->
+            <div id="diagnosis">
+                <h1 class='sectionTitle' style='color:#ffffff'>Diagnosis</h1>
+                <div class="container-horizontal">
+                    <img src='comic_strip_files/docOffice_strip1.png'>
+                    <p class='articleText'>Breast Cancer rates among older women fell in the early 2000s but have lately started to rise again.
+                        <br> Rates for younger women have stayed unfortunately level. At 45 years old, Karina is like 0.1% of
+                        all American women (123 per 100,000).</p>
+                </div>
+
+                <div class="container-horizontal">
+                    <div id="cancerRatesChart">
+                        <svg id='lineChart'></svg>
+                    </div>
+
+                    <div class="chart_buttons">
+                        <input type="radio" class='filterButton' value=1 label='Over 50' onclick='defineCancerRatesData(1)'>
+                        <input type="radio" class='filterButton' value=2 label='Under 50' onclick='defineCancerRatesData(2)'>
+                        <input type="radio" id='allAges' class='filterButton' value=0 label='All Ages' onclick='defineCancerRatesData(0)'>
+                    </div>
+                </div>
+                <!--end Cancer rates chart div-->
+                <div class='comicstrip'>
+                    <div>
+                        <img src='comic_strip_files/docOffice_strip2.1.png'>
+                    </div>
+                    <div class="comicStripLarge">
+                        <img src='comic_strip_files/docOffice_strip2.2.png'>
+                    </div>
+                    <div>
+                        <img src='comic_strip_files/docOffice_strip2.4.png'>
+                    </div>
+                    <div>
+                        <img src='comic_strip_files/docOffice_strip2.3.png'>
+                    </div>
+                </div>
+                <!--end docOffice comic strip-->
+
+                <div id=insuredRates>
+                    <div class="chartTitle">
+                        <h1 class='chartTitle'>Insured Rates among Americans in 2016</h1>
+                    </div>
+                    <p class='articleText'> Nearly
+                        <span class='accent2'> half </span> of all American's insurance is tied to their
+                        <span class='accent2'>workplace.</span>
+                        Insurance plans vary significantly from one to the next. Further, Medicare and Medicaid also differ in how they cover the
+                        costs of cancer. Astonishingly, 9% of all Americans had no insurance coverage in 2016. That's
+                        <span class='accent2'> 28 Million </span> people who would need to pay out of pocket for their cancer treatment.
+                    </p>
+                    <div id='insuredratesimg'>
+                        <p>Insurance Rates Amongst Americans (2016)</p>
+                        <img id='insuredRatesChart' src='media/insuredRatesChart.png'>
+                        <p class='chartSource'>source: Kaiser Family Foundation</p>
+                    </div>
+                    <p class="articleText" style='margin-bottom:10px'>
+                        Karina and Tom are lucky enough to have insurance through his job for now. They pay
+                        <span class="accent2">$4,378</span>
+                        per year in premiums and have a
+                        <span class="accent2">$2,811</span> deductible. They are also responsible for the various
+                        <span class="accent2">copayments</span> the insurance company requires each time they see a doctor. While they were both
+                        working, they could afford this amount without much struggle. But now that Karina is sick she's had
+                        to cut back on her hours and there are more expenses. Their insurance plan has a life-time cap on
+                        out-of-pocket expenses but that doesn't cover the:
+                    </p>
+                    <div class="bodylist-left">
+                        <ul>
+                            <li>Travel</li>
+                            <li>Nonprescription medications</li>
+                            <li>Extra childcare </li>
+                            <li>Lost wages </li>
+                            <li>Special Diets </li>
+                            <li>Wigs and prosthetics</li>
                         </ul>
                     </div>
-
-                    <!--Copyright-->
-                    <div class="footer-copyright">
-
-                        © 2017 Copyright:
-                        <a href="http:www.sarahreed.art" style='color:#ffffff'> Sarah Reed </a>
+                    <div class="container-horizontal budgetChartwrapper">
+                        <div>
+                            <p style='max-width:500px;'>This is Karina and Tom's budget breakdown now that she has cut back on her work and with her
+                                added medical expenses.</p>
+                        </div>
+                        <div class="budgetChart-div">
+                            <canvas class="budgetChart" id='budgetChart2'></canvas>
+                            <p class='chartSource'>Source: http://www.epi.org/resources/budget/ (Jacksonville, FL)</p>
+                        </div>
 
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <!--End Insured Rates-->
+
+                <div id='savingsRates'>
+                    <h1 class='sectionTitle' style='padding-bottom:30px'>Do Americans Have Enough In Savings to Cover the Costs of Cancer?</h1>
+                    <br>
+                    <div class="container-horizontal">
+                        <p>
+                            The overall cost to a patient and her family
+                            <br> varies dramatically depending on</p>
+
+
+                        <ul class='bodylist-center' style='text-align:left'>
+                            <li>Insurance Status</li>
+                            <li>Location</li>
+                            <li>Race</li>
+                            <li>Stage and Type of Cancer</li>
+                        </ul>
+
+                    </div>
+
+
+                    <p>A
+                        <a class="aDark" href='http://ascopubs.org/doi/full/10.1200/jco.2013.53.0956' target="_blank" title='Long Term Financial Burden of Breast Cancer'>
+                            study</a> of women with breast cancer in LA from 2005 to 2007, who had health insurance of some
+                        kind, found:
+                    </p>
+                    <p>
+                        <span class='accent3'>35%</span> had out of pocket expenses greater than $2000</p>
+                    <p>
+                        <span class='accent3'>12%</span> reported increased debt due to their treatment</p>
+                    <p>
+                        <span class='accent3'>5%</span> had their utilities turned off because of upaid bills</p>
+
+                    <br>
+                    <p>In 2017 the average American had less than
+                        <span class='accent3'>$1000</span> in savings.
+                        <br> Karina and Tom, like 57% of Americans, have very little in savings. They currently have just under
+                        $1000 in savings and were hoping to start putting away more as their kids get closer to college.The
+                        added health care expenses they experience will need to be paid for out of his wages, her reduced
+                        hours and, likely, debt.
+                    </p>
+                    <div id="savingsRatesChartdiv">
+                        <p>American Savings Rates</p>
+                        <div id="savingsRatesDiv">
+                            <img src='media/savingsRates_lined.png'>
+                        </div>
+                        <p class='chartSource'>Source:
+                            <a class="aDark" href='https://www.gobankingrates.com/saving-money/half-americans-less-savings-2017/' target="_blank" class='chartSource'>
+                                Go Banking Rates</a>
+                        </p>
+                    </div>
+
+                    <!-- <svg id="savingsChart" width="800" height="500"></svg> -->
+
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <!--End SavingsRates-->
+            </div>
+            <!--end diagnosis div-->
+            <div id='FinancialAssistance'>
+                <h1 class='sectionTitle'>Financial Assistance</h1>
+                <h1 class='chartTitle'>Meeting with the Councelor</h1>
+
+                <p class='articleText'>Many hospitals have a councelor who meets with patients to help them deal with the emotional and financial
+                    burdens of their cancer treatment.</p>
+
+                <div class='comicstrip'>
+                    <div>
+                        <img src='comic_strip_files/councelorsOffice_1-1.png'>
+                    </div>
+                    <div>
+                        <img src='comic_strip_files/councelorsOffice_1-2.png'>
+                    </div>
+                    <div>
+                        <img src='comic_strip_files/councelorsOffice_1-3.png'>
+                    </div>
+                </div>
+
+                <div class='articleText' id='changingJobs'>
+                    <p> In a
+                        <a href='http://ascopubs.org/doi/full/10.1200/jco.2013.53.0956' target="_blank" title='Long Term Financial Burden of Breast Cancer'>
+                            study</a> of breast cancer patients,
+                        <span class='accent2'> 53%</span> reported that it was important to avoid changing jobs because of worry about losing health
+                        insurance.
+                        <span class='accent2'> 25%</span> said they would look for a new job only if they could be assured of comparable benefits.
+                    </p>
+                </div>
+
+                <h1 class='chartTitle'>Charitable Donations</h1>
+                <p class='articleText'>Councelors help patients find charitable donations- a lifeline for many patients. Even those with insurance,
+                    often need help to cover the added costs of the disease like extra childcare, help with housekeeping,
+                    lost wages for time they had to take off work, etc.
+                </p>
+                <div class='comicstrip'>
+                    <div>
+                        <img src='comic_strip_files/councelorsOffice_2-1.png'>
+                    </div>
+                    <div class='comicStripLarge2'>
+                        <img src='comic_strip_files/councelorsOffice_2-2.png'>
+                    </div>
+                    <div>
+                        <img src='comic_strip_files/councelorsOffice_2-3.png'>
+                    </div>
+                </div>
+
+
+                <p class='articleText' id='chemoText'> While receving her chemo treatment, Karina must use the time to fill out applications to charitable organizations
+                    for financial aid.
+                </p>
+                <div id="chemoTreatment">
+                    <iframe src="https://player.vimeo.com/video/242397301?autoplay=1&loop=1&autopause=0" width="500" height="463" frameborder="0"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <!--End Financial Assistance-->
+
+            <div id='costOfpharmaceuticals'>
+                <h4 class='sectionTitle' id='costOfPharmaTitle' style='padding-bottom:30px'>The Cost of Pharmaceuticals</h4>
+                <p class="articleText">The cost of pharmaceuticals is a major component of the overall cost of healthcare today. For patients diagnosed
+                    with later stage cancers, chemotherapy accounts for the majority of their insurance-covered healthcare
+                    costs, especially after year one of treatment.
+                </p>
+                <div id='costofMedicine'>
+                    <img src='media/pharmaLayout-sized.png' width=100%>
+                </div>
+
+            </div>
+            <!--End Cost of Pharma-->
+            <div id='copingMechanisms'>
+                <div id="gradientsection">
+                    <h1 class='sectionTitle' style='color:#ffffff'>Financial Coping Mechanisms</h1>
+                    <div class='comicstrip'>
+                        <div>
+                            <img src='comic_strip_files/lostJob_1-1.png'>
+                        </div>
+                        <div>
+                            <img src='comic_strip_files/lostJob_1-2.png'>
+                        </div>
+                        <div>
+                            <img src='comic_strip_files/lostJob_1-3_test.png'>
+                        </div>
+                        <div>
+                            <img src='comic_strip_files/lostJob_1-4.png'>
+                        </div>
+                        <div id='lostJob_1-5'>
+                            <img src='comic_strip_files/lostJob_1-5.png'>
+                        </div>
+                    </div>
+
+                    <p class="articleText">Karina and Tom will need to either stay on Cobra insurance or shop for insurance on the exchange under
+                        the Affordable Care Act. If they elect to stay on Cobra they will be responsible for the full $16,009
+                        <a class="aDark" href='http://www.commonwealthfund.org/publications/issue-briefs/2016/oct/slowdown-in-employer-insurance-cost-growth'
+                            title='The Commonwealth Fund'>
+                            annual premium</a> that Tom's employer used to pay. Cobra will also only cover them for
+                        <a class="aDark" href='https://www.blr.com/HR-Employment/Benefits-Leave/COBRA-Health-Insurance-Continuation-in-Florida' title='Florida Cobra Information'>18 months.</a>
+                        <br>
+                        <br> Under the Affordable Care Act they, luckily, cannot be denied insurance on the open market because
+                        of Karina's pre-existing condition. If they do decide to look for insurance on the insurance exchange
+                        in Florida, however, they will be in for
+                        <span class="accent2">$555 per month</span> for the premiums for a
+                        <a class="aDark" href='https://www.kff.org/interactive/subsidy-calculator/#state=fl&zip=32218&income-type=dollars&income=20000&employer-coverage=0&people=4&alternate-plan-family=individual&adult-count=2&adults%5B0%5D%5Bage%5D=45&adults%5B0%5D%5Btobacco%5D=0&adults%5B1%5D%5Bage%5D=43&adults%5B1%5D%5Btobacco%5D=0&child-count=2&children%5B0%5D%5Bage%5D=10&children%5B0%5D%5Btobacco%5D=0&children%5B1%5D%5Bage%5D=14&children%5B1%5D%5Btobacco%5D=0'
+                            title='Kaiser Family Foundatiion'>
+                            middle of the road plan</a>. Additionally they will need to cover the
+                        <span class="accent2">
+                            $4,000</span> deductible plus the
+                        <span class="accent2">$11,700</span> out-of-pocket limit for the year. This is after the subsidies provided under the ACA.
+                        <br>
+                        <br> Tom's unemployment will
+                        <a class="aDark" href='https://eligibility.com/unemployment/florida-fl' target="_blank">
+                            max out</a> at
+                        <span class="accent2">$1,100</span> per month.
+                    </p>
+                    <br>
+                    <br>
+                    <div class='container-horizontal budgetChartwrapper'>
+                        <div>
+                            <p style='max-width:500px;'>This is Karina and Tom's budget breakdown now that Tom is out of work. His unemployment income
+                                doesn't come close to covering their expenses now. They've done what they can to cut back
+                                but there's only so much they can cut back on at this point. They're now
+                                <span class="accent2">$2,698</span> under water each month.
+                            </p>
+                        </div>
+                        <div class="budgetChart-div">
+                            <canvas class="budgetChart" id='budgetChart3'></canvas>
+                            <p class='chartSource'>Source: http://www.epi.org/resources/budget/ (Jacksonville, FL)</p>
+                        </div>
+                    </div>
+
+
+                    <p class="articleText">Their meager savings are shot. Tom's out of work. Karina's going to need to stay home to recover from
+                        her double mastectomy and reconstruction.
+                        <span class='accent2'> What do they do? </span>
+                    </p>
+                    <p class="articleText">
+                        Women, and their families, deal with the financial burden of treatment in different ways depending on their situation. All
+                        the coping mechanisms are impactful on the patient and her family and distract from the real work
+                        of healing and surviving.
+                    </p>
+
+                    <p class="articleText">
+                        <span class='accent2'>Some common ways that women and their families cope are:</span>
+                    </p>
+                    <!-- <img src='../media/copingMechanism.png' width=100% style='margin-left:25px'> -->
+                    <div id='startfade1'></div>
+                    <div id='copingMechanismslist'>
+                        <ul>
+                            <li class="element" style='margin-top:0px;'>Obtain samples from doctor</li>
+                            <li class="element">Shop around at pharmacies for the lowest prices</li>
+                            <li class="element">Spread out clinic or chemo appointments</li>
+                            <li class="element">Ask doctor for less expensive medication</li>
+
+                            <li class="element">Purchase over-the-counter medications to replace prescriptions</li>
+
+                            <li class="element">Reduce spending on basics like food and clothing</li>
+                            <li class="element">Borrow money or use credit to pay for medications</li>
+
+                            <li class="element">Use all or a portion of savings to pay for cancer care</li>
+
+                            <li class="element">Fill only part of the prescription</li>
+                            <li class="element">Choose one doctor over another for price</li>
+
+                            <li class="element">Decide not to have recommended test</li>
+
+                            <li class="element">Reduce spending on leisure activities like vacations, eating out or movies</li>
+                            <li class="element">Don't fill the prescription</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="articleText">
+                            Failing to adhere to the recommended treatment program can reduce its efficacy and prolong the disease. Rest and leisure
+                            activities during and after cancer treatment should not be a luxury and are critical to
+                            <span class='accent2'>reducing stress
+                            </span> which is
+                            <a href='http://www.apa.org/helpcenter/stress.aspx' target="_blank" title='American Psychological Association'>correlated</a> with improved health.
+                        </p>
+                    </div>
+                </div>
+                <!--End Coping Mechanisms-->
+                <div id='solutions'>
+
+
+                    <h1 class='sectionTitle'>Solutions</h1>
+                    <p class="articleText">There are many factors that contribute to the financial impact of breast cancer. Policy solutions have
+                        been proposed to address a variety of them.</p>
+                    <h1 class='accent3'>The Cost of Medications</h1>
+                    <p class="articleText"> The lion's share of cost to treat breast cancer comes down to the
+                        <span class='accent3'>cost of medications</span>. Pharmaceutical companies use the patents they hold on the cancer medications
+                        to
+                        <span class='accent3'>protect the prices they charge</span>.
+                        <p class="articleText">Extensive research has been conducted to study how to reduce the stranglehold while continuing to
+                            encourage innovation
+                        </p>
+                        <p class="articleText">Some solutions that have been proposed are:</p>
+                        <div class="bodylist-left">
+                            <ul>
+                                <li>
+                                    <a class="aDark" href='http://delinkage.org/' target="_blank" title='Delinkage.org'>Delinkage</a>
+                                </li>
+                                </li>
+                                <li>
+                                    <a class="aDark" href='https://www.innovationpolicyplatform.org/content/patent-pools-and-antitrust' target="_blank" title='Innovation Policy Platform'>
+                                        Patent Pooling</a> (watch a great video about it
+                                    <a class="aDark" href='https://www.ted.com/talks/ellen_t_hoen_pool_medical_patents_save_lives' target="_blank" title='TED.com'>here</a>)
+                                </li>
+                                <li>Allow Medicare to negotiate drug prices as Medicaid and all other insurance companies are
+                                    allowed to
+                                </li>
+                                <li>Allow drugs to be imported from countries where they are sold at reduced prices</li>
+                                <li>Find even more information about the issue of pharmaceutical patents
+                                    <a class="aDark" href='http://accesstomedicines.org/access-to-medicines' target="_blank" title='Access To Medicines'>here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <h1 class='accent3'>Health Insurance</h1>
+                        <p class="articleText">As with the cost of pharmaceuticals, the issue of health insurance is complicated. Throughout this
+                            research, however, two questions consistently floated to the top.
+                        </p>
+                        <p class="articleText indented"> Why should a person fighting to survive cancer feel that they have to work just to keep their insurance?
+                        </p>
+                        <p class="articleText indented"> Why should your health be tied to your job?</p>
+                        <div id="unstickNav"></div>
+                        <p class="articleText"> A solution to this problem is
+                            <span class='accent3'>universal healthcare (single-payer)</span>- health insurance provided by the goverment to all
+                            citizens. All citizens are, therefore, guaranteed the right to healthcare. This would allow the
+                            the government to negotiate with pharmaceutical companies as one large block instead of individual
+                            health insurers negotiating piecemeal. The government already negotiates with the pharmaceutical
+                            companies through Medicaid but at a much smaller volume.
+                            <br>
+                            <br> Learn more about universal healthcare
+                            <a class="aDark" href='http://www.healthpaconline.net/universal-health-care.htm' target="_blank" title='HealthPAConline.net'>here</a>
+                            or
+                            <a class="aDark" href='http://www.pnhp.org/facts/what-is-single-payer' target="_blank" title='Physicians for A National Health Program'>here</a>.
+                            <br> Learn more about how America is the only industrialized country without single-payer healthcare
+                            <a class="aDark" href='https://www.theatlantic.com/international/archive/2012/06/heres-a-map-of-the-countries-that-provide-universal-health-care-americas-still-not-on-it/259153/'
+                                target="_blank" title='The Atlantic'>
+                                here.</a>
+                        </p>
+                        <br>
+                        <h1 class='accent3'> What can you do? </h1>
+                        <p class="articleText">Contact your elected officials and call for more consideration of the solutions listed here. It's
+                            only through the voice of the citizens that the elected officials are guided on the right path.</p>
+                        <br>
+                        <p class="articleText accent3">Find out how to contact your elected officials
+                            <a class="aDark" href='http://act.commoncause.org/site/PageServer?pagename=sunlight_advocacy_list_page' target="_blank" title='Common Cause'>here</a>
+                        </p>
+                </div>
+                <!--End Solutions-->
+
+            </div>
+
+
+            <div id="sources">
+                <p>Sources for the Cost of Pharmaceutical Section:
+                    <br>
+                    <a class="aDark" href='https://www.nature.com/articles/nrclinonc.2017.31' target="_blank">The High Price of AntiCancer Drugs: origins, implications, barriers, solutions</a>
+                    <br>
+                    <a class="aDark" href='http://www.cancernetwork.com/her2-positive-breast-cancer/pertuzumab-not-cost-effective-metastatic-her2-positive-breast-cancer'
+                        target="_blank">
+                        Pertuzumab Not Cost Effective in Metastatic HER2-Positive Breast Cancer </a>
+                    <br>
+                    <a class="aDark" href='https://www.forbes.com/sites/liyanchen/2015/09/23/the-most-profitable-industries-in-2015/#3a2c031a6b73'
+                        target="_blank">
+                        Most Profitable Industries in 2015</a>
+                    <br>
+                    <a class="aDark" href='https://www.washingtonpost.com/news/wonk/wp/2015/02/11/big-pharmaceutical-companies-are-spending-far-more-on-marketing-than-research/?utm_term=.ee1435c49a5f'
+                        target="_blank">
+                        Big pharmaceutical companies are spending far more on marketing than research</a>
+                </p>
+            </div>
+
+            <!--end Sources div-->
+
+            <footer>
+                <ul class="social-network social-circle">
+                    <li>
+                        <a href="#" class="icoFacebook" title="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icoTwitter" title="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icoGoogle" title="Google +">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!--Copyright-->
+                <div class="footer-copyright">
+
+                    © 2017 Copyright:
+                    <a href="http:www.sarahreed.art" style='color:#ffffff'> Sarah Reed </a>
+
                 </div>
                 <!--/.Copyright-->
 
             </footer>
 
-            <script src="https://d3js.org/d3.v4.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-            <script type='text/javascript' src='main.js'></script>
-    </body>
+
+
+
+
+
+
+        </div>
+    </div>
+    <!--end master div-->
+
+
+</body>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'></script>
+<script type='text/javascript' src='main.js'></script>
+<script type='text/javascript' src='BCratesChart.js'></script>
+<script type='text/javascript' src='scrollTrigger.js'></script>
+<!-- <script type='text/javascript' src='savingsRatesChart.js'></script> -->
+<script type='text/javascript' src='budget.js'></script>
 
 </html>
