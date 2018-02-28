@@ -6,7 +6,13 @@ html,body{
 body {
     position: relative;
     background-color: #616161;
+    overflow-x: hidden;
+    max-width: 1020px;
+    margin: 0 auto;
 }
+/* div{
+    border:1pt solid red;
+} */
 
 h1,
 h2,
@@ -21,59 +27,80 @@ a,
 li {
     font-family: 'Oswald', sans-serif;
     font-weight: lighter;
+    font-size: 24px;
 }
 
 a {
     color: #6097A0;
 }
-
-.affix {
-    top: 20px;
-    z-index: 9999 !important;
+.aDark{
+    color:#8EDFEC;
 }
 
-nav.col-md-2 a {
-    color: #ffffff;
-    font-size: 20px;
+.masterFlex-container{
+    display:flex;
+    flex-direction: column;
 }
+.container-column{
+    display:flex;
+    flex-direction: column;
+    /* margin-left: 100px; */
+    margin-right: 100px;
+}
+.container-horizontal{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.leftImageContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.chemoBill{
+    float:right;
+    max-width: 400px;
+    padding: 20px 0px 20px 20px;
+}
+.FullSizeimage{
+  max-width:100%
+}
+.chartSource{
+    font-size: 1em;
+    padding-bottom: 50px;
+}
+/**Landing page styling**/
+    #header {
+        background-color:#333333;
+        text-align:center;
+        padding: 20px;
+        display: flex;
+    }
 
-.col-md-2 a:active,
-.active,
-.col-md-2 a:hover,
-.col-md-e a:focus,
-.col-md-e a:visited {
-    background-color: #6097A0 !important;
-}
+    #landingpage, #introrow, #intro{
+        overflow-y:auto;
+        height:100%;
+    }
+    #landingPagetitle{
+        font-family: 'Oswald', sans-serif;
+        font-weight:normal;
+        font-size:40px;
+    }
 
-#header {
-    background-color: #333333;
-    text-align: center;
-}
-
-#landingpage, #introrow, #intro{
-    overflow-y:auto;
-    height:100%;
-}
-#landingPagetitle{
-    font-family: 'Oswald', sans-serif;
-    font-weight:normal;
-    font-size:40px;
-}
 
 #intro {
-    background: url('../media/chemoBill-small.png') no-repeat center center fixed; 
+    background: url('media/chemoBill-small.png') center center fixed;
+    /* no-repeat center center fixed  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    
+    background-size: cover;   
+    height: 100%;
 }
-/* #landingpage, #introrow, #intro{
-    overflow-y:hidden;
-    height:100%;
-} */
 
-#introtext{
+#introtextDiv{
     color: #ffffff;
     margin: 0px;
     padding: 50px 200px 50px 200px;
@@ -84,108 +111,145 @@ nav.col-md-2 a {
     padding: 15px;
     font-size: 30px;
 }
+/*** Navigation ***/
+  
+  .sidebar {
+    width: 220px;
+    position: fixed;
+    top:1000px;
+    background-color: #fff;
+  }
+  .fixed {
+    position: fixed;
+    top:200px;
+    /* left:0; */
+  }
+  .nav li{
 
-.container {
-    margin: 0px;
-}
-
-#diagnosis,
-#FinancialAssistance,
-#outcome,
-#copingMechanisms {
-    background-color: #ffffff;
-    padding: 40px;
-    margin-right: -15px;
-    margin-top: -20px;
-}
-
-#introduction,
-#savingsRates,
-#solutions {
-    background-color: #8D848C;
-    color: #ffffff;
-    padding: 40px;
-    margin-right: -15px;
-    margin-top: -20px;
-}
-
-#savingsRates {
+  }
+  .content {
+    flex: 1;
+    /* justify-content: center; */
+    /* padding: 30px; */
+    background: #eee;
+    box-shadow: 0 0 5px rgba(0,0,0,1); 
+    transform: translate3d(0,0,0);
+    transition: transform .3s;
+  }
+  
+  .content.isOpen {
+    transform: translate3d(220px,0,0);
+  }
+  
+  .navButton {
+    cursor: pointer;
+    position: sticky;
+    top:50%;
+    right:100px;
+    border: gray;
+    font-size: 2em;
+  }  
+  
+  .title {
+    font-size: 16px;
+    line-height: 50px;
     text-align: center;
-}
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #eee;
+    border-bottom: 1px solid #222;
+    background: #2a2a2a;
+  }
+  
+  .nav li a {
+    position: relative;
+    display: block;
+    padding: 5px 0 5px 10px;
+    font-size: 20px;
+    color: #6097A0;
+  }
+  
+  .nav li a:before {
+    font: 14px fontawesome;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+  }
 
-#savingsRates a,#solutions a {
-    color: rgb(75, 119, 126);
-    font-weight: bold;
-}
 
-#costOfpharmaceuticals
- {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 40px;
-    margin-right: -15px;
-    margin-top: -20px;
-}
+/***Section styling**/
+    #diagnosis,
+    #FinancialAssistance,
+    #outcome,
+    #copingMechanisms {
+        background-color: #ffffff;
+        margin-top: -20px;
+        padding-top: 20px;
+    }
 
-#peopleText {
+    #introduction,
+    #savingsRates,
+    #solutions
+    {
+        background-color: #8D848C;
+        color: #ffffff;
+        width:100%;
+    }
+    #introduction{
+        margin-top: -40px;
+        padding-bottom:50px;
+    }
+    #savingsRates{
+        padding-top: 30px;
+    }
+ 
+    #savingsRates p{
+        margin:0 100px;
+    }
+    #copingMechanisms{
+        padding-top: 0px;
+    }
+   
+    #solutions h1{
+        margin-left:100px;
+    }
+   #solutions{
+        padding:50px 0;
+    }
+    #costOfpharmaceuticals,
+    #sources,
+    footer 
+    {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 40px;
+        margin-top: -20px;
+    }
+
+.peopleText {
     margin-right: 40px;
     font-size: 24px;
 }
-
-#karinaAndtom {
-    margin-right: -20px;
-}
-#gradsection{
-    margin:-80px -40px 0 -40px;
-    background: #ffffff; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#333333 10px, #ffffff ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#333333 10px, #ffffff ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#333333 10px, #ffffff ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#333333 10px, #ffffff ); /* Standard syntax */
+.articleText {
+    margin:0 100px;
+    font-size: 24px;
 }
 
-#gradSection{
-    height:100px;
-    width:100%; 
+.articleText::first-letter{
+    font-size: 2em;
 }
-#divider{
-    border-width: 5px;
-    border-style: 'double'
-}
+
+
 .sectionTitle {
-    padding: 75px;
+    padding: 20px;
+    margin:55px;
     text-align: center;
-    font-size: 55px;
+    font-size: 40px;
+    background-color: #8D3164;
 }
 
 .chartTitle {
     margin-left: 100px;
-}
-
-.video {
-    padding-bottom: 75px;
-    text-align: center;
-}
-
-.explantext {
-    margin: 100px;
-    font-size: 30px;
-}
-
-.explantext2 {
-    margin: 40px 300px 40px 200px;
-    font-size: 30px;
-    font-weight: 'Regular';
-}
-
-.explantextsmall {
-    margin: 25px 200px 25px 100px;
-    font-size: 24px;
-}
-
-.explantextsmallMargin {
-    margin: 20px 100px 20px 100px;
-    font-size: 30px;
 }
 
 .accent2 {
@@ -198,35 +262,99 @@ nav.col-md-2 a {
     font-weight: bold;
 }
 
-.bodylist {
+.bodylist-center {
     list-style-position: inside;
     text-align: center;
     font-size: 24px;
 }
 
 .bodylist-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style-position: inside;
-    text-align: left;
-    font-size: 24px;
-    margin-left: 275px;
     margin-right: 100px;
 }
+.bodylist-left li{
+    text-align: left;
+    font-size: 20px;
+
+}
+.indented{
+    margin-left:200px;
+}
+
+/***Budget formatting**/
+    .budgetChart-div{
+        padding: 20px;
+        max-width: 100%;
+        height: 300px;
+    }
+    .budgetChartwrapper{
+        padding:0 20px;
+    }
+    canvas{
+        height:100%;
+        max-width:100%;
+
+    }
 
 
-#budget{
-    font-family: 'Oswald', sans-serif;
-    font-size:1.25em;
+/*comic Strip styling*/
+    .comicstrip{
+        margin: 0px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .comicstrip div{
+        padding-right:5px;
+        width:30%;
+        height:auto;
+    }
+
+    .comicstrip div:last-of-type{
+        padding-right:0px;
+    }
+    .comicstrip img{
+        width: 100%;
+    }
+
+    .comicStripLarge{
+        max-width:150px;
+        height:auto;
+    }
+    .comicStripLarge2{
+        max-width:200px;
+        height:auto;
+    }
+
+#gradientsection{
+    /* margin:-100px -40px 0 -40px; */
+    padding: 30px 0;
+    background: #ffffff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#333333 10px, #ffffff ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333333 10px, #ffffff ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333333 10px, #ffffff ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333333 10px, #ffffff ); /* Standard syntax */
 }
-#budget th{
-    font-size:1.5em;
-}
-.center{
-    text-align:center;
+
+#gradSection{
+    height:100px;
+    width:100%; 
 }
 /**** Cancer Rates Chart ******/
 
     #cancerRatesChart{
-        margin-bottom:75px;
+        /* margin-bottom:75px;
+        margin-right: 100px; */
+        width: 100%;
+        min-height:500px;
+        margin:40px 0 40px 0;
     }
 
     #chart_buttons {
@@ -235,6 +363,19 @@ nav.col-md-2 a {
     }
 
     input.filterButton[type=button] {
+        width: 100px;
+        height: 100px;
+        transition: all 250ms ease;
+        will-change: transition;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        /* font-family: $font; */
+        font-weight: 900;
+    }
+    
+    /* input.filterButton[type=button] {
         position: relative;
         display: block;
         width: 75px;
@@ -246,7 +387,7 @@ nav.col-md-2 a {
         padding: 10px;
         margin-top: 30px;
         margin-bottom: 30px;
-    }
+    } */
 
     .lineLabels {
         font-family: Helvetica;
@@ -297,15 +438,23 @@ nav.col-md-2 a {
 
 /*------Insured Rates-----*/
 
-    #insuredratesimg {
+    #insuredratesimg, #savingsRatesChartdiv {
         text-align: center;
+    }
+    #insuredRatesChart{
+        max-width:500px;
     }
 
 
 /**** Savings Rates Chart****/
-
-    #savingsChart {
-        margin-top: 0px;
+    #savingsRatesDiv{
+        min-height:400px;
+        text-align: center;
+    }
+    #savingsRatesDiv img {
+        height:100%;
+        width: auto;
+        max-width: 500px;
     }
 
     #savingschartTitle {
@@ -327,22 +476,41 @@ nav.col-md-2 a {
         fill: #ffffff;
     }
 
+#chemoTreatment, #lostJob_1-5{
+    display: flex;
+    justify-content: center;
+}
+#chemoText{
+    margin:70px 300px 0px 300px;
+}
+/***sources**/
+
+    #sources{
+        display: flex;
+        justify-content: center;
+        
+    }
+    #sources>p>a{
+        font-size: 16px;
+    }
+
 
 /*****Footer****/
 
-footer {
-    text-align: center;
-    padding: 25px;
-}
-audio{
-    
-    max-width: 100px;
-    height: auto;
-    position: fixed;
-    top: 100%;
-    left:0px;
-    object-fit: inherit;
-}
+    footer {
+        
+        text-align: center;
+        padding: 25px;
+    }
+    audio{
+        
+        max-width: 100px;
+        height: auto;
+        position: fixed;
+        top: 100%;
+        left:0px;
+        object-fit: inherit;
+    }
 
 /*=========================
     Icons
@@ -453,13 +621,15 @@ audio{
 
 /****Scrolling fanciness***/
     #copingMechanismslist{
-        height:500px;
-        width: 100%;
-        margin-left:300px;
+        height:auto;
+        /* width: 100%; */
+        margin-left:100px;
         margin-right:100px;
+        overflow: hidden;
     }
     .element{
         display: none;
-        margin-top:-5px;
         font-size: 24px;
     }
+
+

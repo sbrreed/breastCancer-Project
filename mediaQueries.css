@@ -1,0 +1,131 @@
+
+/*media queries*/
+@media screen and (max-width: 500px){
+    #introtextDiv{
+        padding: 10px;
+    }
+    .introtext {
+        font-size: 20px;
+    }
+    .accent2, .accent3{
+        font-size: 20px
+    }
+    #introduction p{
+        margin:0 10%;
+        font-size: 18px;
+    }
+    .sectionTitle{
+        font-size: 30px;
+    }
+    .articleText, #savingsRates p{
+        margin: 0 30px;
+        font-size: 24px;
+    }
+    .articleText::first-letter{
+        font-size: 1.5em;
+    }
+    .comicstrip{
+    flex-wrap:wrap;         
+    }
+    .comicstrip div{
+        padding:10px;
+        min-width: 300px;
+    }
+    
+    .comicStripLarge{
+        max-width: 100%;
+        width: 100%;
+        height:250px;
+        text-align: center;
+    }
+    .comicstrip > .comicStripLarge{
+        height: 250px;
+    }
+    .comicStripLarge img{
+        height:100%;
+        width:auto;
+        max-height:100%;
+        min-width:auto;
+       
+    }
+    .comicStripLarge2{
+        max-width: 100%;
+        width: 100%;
+        height:250px;
+        text-align: center;
+    }
+    .comicstrip > .comicStripLarge2{
+        height: 250px;
+    }
+    .comicStripLarge2 img{
+        height:100%;
+        width:auto;
+        max-height:100%;
+        min-width:auto;
+       
+    }
+    #landingPagetitle{
+        font-size:30px;
+    }
+    .leftImageContainer{
+        flex-wrap:wrap;
+    }
+    .leftImageContainer img{
+        max-width: 70%;
+    }
+    .chemoBill{
+        max-width: 70%;
+        padding: 10px;
+    }
+    .container-horizontal{
+        flex-wrap: wrap;
+    }
+   
+    .chartTitle{
+        margin: 20px;
+    }
+    #insuredRatesChart{
+        padding: 20px;
+        width: 80%;
+        height: auto;
+    }
+    .bodylist-left li, .bodylist-center li{
+        font-size: 18px;
+    }
+    #chemoText{
+        margin:10px;
+    }
+    #costOfPharmaTitle{
+        font-size: 40px;
+        margin: 0px;
+    }
+    #costofMedicine{
+        margin: 0 -40px 40px -60px;
+    }
+    #costOfpharmaceuticals{
+        padding: 00px 0px 20px 0px;
+    }
+    #copingMechanismslist{
+        margin:10px;
+    }
+    .element{
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    #copingMechanismslist{
+        list-style-type: circle;
+    }
+    #solutions h1{
+        margin:20px;
+        font-size: 30px;
+    }
+    .indented{
+        margin-left:50px;
+    }
+    #savingsRatesDiv{
+        min-height:200px;
+    }
+    #savingsRatesDiv img {
+        max-width: 90%;
+    }
+}
