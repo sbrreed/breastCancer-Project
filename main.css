@@ -71,6 +71,11 @@ a {
     font-size: 1em;
     padding-bottom: 50px;
 }
+
+#karinaAndtom{
+   float:left; max-width:500px;
+}
+
 /**Landing page styling**/
     #header {
         background-color:#333333;
