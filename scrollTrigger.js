@@ -1,7 +1,8 @@
 /** Scrolling Fanciness **/
 // Init ScrollMagic
+var controller = new ScrollMagic.Controller();
+
 function scrollFadeIn() {
-    var controller = new ScrollMagic.Controller();
     var time = 1000;
     var margin = 100;
     var fadeScene = new ScrollMagic.Scene({
@@ -22,20 +23,31 @@ function scrollFadeIn() {
                 }
             })
         })
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 };
 
 
 
 function stickNav() {
-    var Navcontroller = new ScrollMagic.Controller();
     var stickyNav = new ScrollMagic.Scene({
             triggerElement: '#introduction',
             triggerHook: 0.3
         })
         .setClassToggle('#sidebar', 'fixed')
-        .addIndicators()
-        .addTo(Navcontroller);
+        // .addIndicators()
+        .addTo(controller);
 
 }
+
+// function budget1() {
+//     var Navcontroller = new ScrollMagic.Controller();
+//     var stickyNav = new ScrollMagic.Scene({
+//             triggerElement: '#introduction',
+//             triggerHook: 0.3
+//         })
+//         .setClassToggle('#sidebar', 'fixed')
+//         // .addIndicators()
+//         .addTo(Navcontroller);
+
+// }

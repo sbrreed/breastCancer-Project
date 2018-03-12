@@ -23,7 +23,7 @@ var budget_chart1 = new Chart(bar_ctx, {
     data: {
         labels: ['Income', 'Expenses'],
         datasets: [{
-                label: 'Tom',
+                title: 'Tom',
                 data: [6620, 0],
                 backgroundColor: "#6F425B",
                 hoverBackgroundColor: "#1D1E26",
@@ -31,7 +31,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Karina',
+                title: 'Karina',
                 data: [400, 0],
                 backgroundColor: "#56193A",
                 hoverBackgroundColor: "#313340",
@@ -39,7 +39,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Housing',
+                title: 'Housing',
                 data: [0, 935],
                 backgroundColor: "#2E4E4D",
                 hoverBackgroundColor: "#1D1E26",
@@ -47,7 +47,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Food',
+                title: 'Food',
                 data: [0, 782],
                 backgroundColor: "#233B3A",
                 hoverBackgroundColor: "#313340",
@@ -55,7 +55,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Transportation',
+                title: 'Transportation',
                 data: [0, 608],
                 backgroundColor: "#ABB8B8",
                 hoverBackgroundColor: "#626673",
@@ -63,7 +63,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Health Insurance',
+                title: 'Health Insurance',
                 data: [0, 600],
                 backgroundColor: "#587171",
                 hoverBackgroundColor: "#BFC7D9",
@@ -71,7 +71,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Other Medical Expenses',
+                title: 'Other Medical Expenses',
                 data: [0, 200],
                 backgroundColor: "#5BBDBD",
                 hoverBackgroundColor: "#BFC7D9",
@@ -79,7 +79,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Child Related',
+                title: 'Child Related',
                 data: [0, 650],
                 backgroundColor: "#94BDBD",
                 hoverBackgroundColor: "#BFC7D9",
@@ -87,7 +87,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Taxes',
+                title: 'Taxes',
                 data: [0, 502],
                 backgroundColor: "#303E3E",
                 hoverBackgroundColor: "#A8B0BF",
@@ -95,7 +95,7 @@ var budget_chart1 = new Chart(bar_ctx, {
                 hoverBorderColor: 'lightgrey'
             },
             {
-                label: 'Other Necessities',
+                title: 'Other Necessities',
                 data: [0, 829],
                 backgroundColor: "#546E6E",
                 hoverBackgroundColor: "#6F7C8A",
@@ -121,8 +121,11 @@ var budget_chart1 = new Chart(bar_ctx, {
             callbacks: {
                 label: function (tooltipItem, data) {
                     return "$" + tooltipItem.xLabel.toString();
-
+                },
+                title: function(tooltipItem, data) {
+                    return tooltipItem['index'].title;
                 }
+                
             }
         },
         scales: {
@@ -141,11 +144,8 @@ var budget_chart1 = new Chart(bar_ctx, {
             }],
             yAxes: [{
                 stacked: true,
-                // ticks: {
-                // 		callback: function(value) { return numberWithCommas(value); },
-                // 		}, 
-                // }],
-            }], // scales
+            
+            }], 
             legend: {
                 display: true
             }
@@ -280,15 +280,11 @@ var budget_chart2 = new Chart(bar_ctx2, {
             }],
             yAxes: [{
                 stacked: true,
-                // ticks: {
-                // 		callback: function(value) { return numberWithCommas(value); },
-                // 		}, 
-                // }],
-            }], // scales
+            }], 
             legend: {
                 display: true
             }
-        } // options
+        } 
     }
 });
 
@@ -397,8 +393,7 @@ var budget_chart3 = new Chart(bar_ctx3, {
             callbacks: {
                 label: function (tooltipItem, data) {
                     return "$" + tooltipItem.xLabel.toString();
-
-                }
+                },
             }
         },
         scales: {

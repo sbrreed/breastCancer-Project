@@ -80,6 +80,10 @@
     .container-horizontal{
         flex-wrap: wrap;
     }
+    .container-horizontal img{
+        max-width: 100%;
+        min-width: 80%;
+    }
    
     .chartTitle{
         margin: 20px;
@@ -128,4 +132,38 @@
     #savingsRatesDiv img {
         max-width: 90%;
     }
+    #karinaAndtom{
+        float:left; max-width:80%;
+    }
+    /*Cancer Rates Chart*/
+    #cancerRatesChart{
+        margin: 0px;
+        width: 100%;
+        min-height:200px;
+    }
+    .lineLabels {
+        font-family: Helvetica;
+        font-size: 10px;
+        /* letter-spacing: 5px; */
+    }
+    .axis--x, .axis--y {
+        fill: #616161;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    /* label {
+        width: 100px;
+        height: 20px;
+        transition: all 250ms ease;
+        will-change: transition;
+        display: inline-block;
+        text-align: center;
+        vertical-align: center;
+        cursor: pointer;
+        position: relative;
+        font-family: 'Oswald', sans-serif;
+    } */
+
 }

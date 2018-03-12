@@ -1,8 +1,10 @@
-html,body{
-    height:100%;
-    width:100%;
-    margin:0px;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
 }
+
 body {
     position: relative;
     background-color: #616161;
@@ -10,6 +12,7 @@ body {
     max-width: 1020px;
     margin: 0 auto;
 }
+
 /* div{
     border:1pt solid red;
 } */
@@ -33,62 +36,83 @@ li {
 a {
     color: #6097A0;
 }
-.aDark{
-    color:#8EDFEC;
+
+.aDark {
+    color: #8EDFEC;
 }
 
-.masterFlex-container{
-    display:flex;
+.masterFlex-container {
+    display: flex;
     flex-direction: column;
 }
-.container-column{
-    display:flex;
+
+.container-column {
+    display: flex;
     flex-direction: column;
     /* margin-left: 100px; */
     margin-right: 100px;
 }
-.container-horizontal{
-    display:flex;
+
+.container-horizontal {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
-.leftImageContainer{
-    display:flex;
+
+.container-horizontal img {
+    max-width: 50%;
+}
+
+.leftImageContainer {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
-.chemoBill{
-    float:right;
+
+.leftImageContainer img {
+    max-width: 500px;
+}
+
+.chemoBill {
+    float: right;
     max-width: 400px;
     padding: 20px 0px 20px 20px;
 }
-.FullSizeimage{
-  max-width:100%
+
+.FullSizeimage {
+    max-width: 100%
 }
-.chartSource{
+
+.chartSource {
     font-size: 1em;
     padding-bottom: 50px;
 }
+
 /**Landing page styling**/
-    #header {
-        background-color:#333333;
-        text-align:center;
-        padding: 20px;
-        display: flex;
-    }
 
-    #landingpage, #introrow, #intro{
-        overflow-y:auto;
-        height:100%;
-    }
-    #landingPagetitle{
-        font-family: 'Oswald', sans-serif;
-        font-weight:normal;
-        font-size:40px;
-    }
+#header {
+    background-color: #333333;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
 
+#landingpage,
+#introrow,
+#intro {
+    overflow-y: auto;
+    height: 100%;
+}
+
+#landingPagetitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+}
 
 #intro {
     background: url('media/chemoBill-small.png') center center fixed;
@@ -96,11 +120,11 @@ a {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   
+    background-size: cover;
     height: 100%;
 }
 
-#introtextDiv{
+#introtextDiv {
     color: #ffffff;
     margin: 0px;
     padding: 50px 200px 50px 200px;
@@ -111,46 +135,50 @@ a {
     padding: 15px;
     font-size: 30px;
 }
+
 /*** Navigation ***/
-  
-  .sidebar {
+
+.sidebar {
     width: 220px;
     position: fixed;
-    top:1000px;
+    top: 1000px;
     background-color: #fff;
-  }
-  .fixed {
-    position: fixed;
-    top:200px;
-    /* left:0; */
-  }
-  .nav li{
+}
 
-  }
-  .content {
+.fixed {
+    position: fixed;
+    top: 25%;
+    /* left:0; */
+}
+.navButton {
+    cursor: pointer;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+    right: 100px;
+    border: gray;
+    font-size: 2em;
+}
+#karinaAndtom{
+    float:left; max-width:500px;
+}
+.content {
     flex: 1;
     /* justify-content: center; */
     /* padding: 30px; */
     background: #eee;
-    box-shadow: 0 0 5px rgba(0,0,0,1); 
-    transform: translate3d(0,0,0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    transform: translate3d(0, 0, 0);
     transition: transform .3s;
-  }
-  
-  .content.isOpen {
-    transform: translate3d(220px,0,0);
-  }
-  
-  .navButton {
-    cursor: pointer;
-    position: sticky;
-    top:50%;
-    right:100px;
-    border: gray;
-    font-size: 2em;
-  }  
-  
-  .title {
+}
+
+.content.isOpen {
+    transform: translate3d(220px, 0, 0);
+}
+
+
+
+.title {
     font-size: 16px;
     line-height: 50px;
     text-align: center;
@@ -159,90 +187,93 @@ a {
     color: #eee;
     border-bottom: 1px solid #222;
     background: #2a2a2a;
-  }
-  
-  .nav li a {
+}
+
+.nav li a {
     position: relative;
     display: block;
     padding: 5px 0 5px 10px;
     font-size: 20px;
     color: #6097A0;
-  }
-  
-  .nav li a:before {
+}
+
+.nav li a:before {
     font: 14px fontawesome;
     position: absolute;
     top: 19px;
     left: 20px;
-  }
-
+}
 
 /***Section styling**/
-    #diagnosis,
-    #FinancialAssistance,
-    #outcome,
-    #copingMechanisms {
-        background-color: #ffffff;
-        margin-top: -20px;
-        padding-top: 20px;
-    }
 
-    #introduction,
-    #savingsRates,
-    #solutions
-    {
-        background-color: #8D848C;
-        color: #ffffff;
-        width:100%;
-    }
-    #introduction{
-        margin-top: -40px;
-        padding-bottom:50px;
-    }
-    #savingsRates{
-        padding-top: 30px;
-    }
- 
-    #savingsRates p{
-        margin:0 100px;
-    }
-    #copingMechanisms{
-        padding-top: 0px;
-    }
-   
-    #solutions h1{
-        margin-left:100px;
-    }
-   #solutions{
-        padding:50px 0;
-    }
-    #costOfpharmaceuticals,
-    #sources,
-    footer 
-    {
-        background-color: #333333;
-        color: #ffffff;
-        padding: 40px;
-        margin-top: -20px;
-    }
+#diagnosis,
+#FinancialAssistance,
+#outcome,
+#copingMechanisms {
+    background-color: #ffffff;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+
+#introduction,
+#savingsRates,
+#solutions {
+    background-color: #8D848C;
+    color: #ffffff;
+    width: 100%;
+}
+
+#introduction {
+    margin-top: -40px;
+    padding-bottom: 50px;
+}
+
+#savingsRates {
+    padding-top: 30px;
+}
+
+#savingsRates p {
+    margin: 0 100px;
+}
+
+#copingMechanisms {
+    padding-top: 0px;
+}
+
+#solutions h1 {
+    margin-left: 100px;
+}
+
+#solutions {
+    padding: 50px 0;
+}
+
+#costOfpharmaceuticals,
+#sources,
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 40px;
+    margin-top: -20px;
+}
 
 .peopleText {
     margin-right: 40px;
     font-size: 24px;
 }
+
 .articleText {
-    margin:0 100px;
+    margin: 0 100px;
     font-size: 24px;
 }
 
-.articleText::first-letter{
+.articleText::first-letter {
     font-size: 2em;
 }
 
-
 .sectionTitle {
     padding: 20px;
-    margin:55px;
+    margin: 55px;
     text-align: center;
     font-size: 40px;
     background-color: #8D3164;
@@ -275,361 +306,354 @@ a {
     list-style-position: inside;
     margin-right: 100px;
 }
-.bodylist-left li{
+
+.bodylist-left li {
     text-align: left;
     font-size: 20px;
-
 }
-.indented{
-    margin-left:200px;
+
+.indented {
+    margin-left: 200px;
 }
 
 /***Budget formatting**/
-    .budgetChart-div{
-        padding: 20px;
-        max-width: 100%;
-        height: 300px;
-    }
-    .budgetChartwrapper{
-        padding:0 20px;
-    }
-    canvas{
-        height:100%;
-        max-width:100%;
 
-    }
+.budgetChart-div {
+    padding: 20px;
+    max-width: 100%;
+    height: 300px;
+}
 
+.budgetChartwrapper {
+    padding: 0 20px;
+}
+
+canvas {
+    height: 100%;
+    max-width: 100%;
+}
 
 /*comic Strip styling*/
-    .comicstrip{
-        margin: 0px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
 
-    }
+.comicstrip {
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-    .comicstrip div{
-        padding-right:5px;
-        width:30%;
-        height:auto;
-    }
+.comicstrip div {
+    padding-right: 5px;
+    width: 30%;
+    height: auto;
+}
 
-    .comicstrip div:last-of-type{
-        padding-right:0px;
-    }
-    .comicstrip img{
-        width: 100%;
-    }
+.comicstrip div:last-of-type {
+    padding-right: 0px;
+}
 
-    .comicStripLarge{
-        max-width:150px;
-        height:auto;
-    }
-    .comicStripLarge2{
-        max-width:200px;
-        height:auto;
-    }
+.comicstrip img {
+    width: 100%;
+}
 
-#gradientsection{
+.comicStripLarge {
+    max-width: 150px;
+    height: auto;
+}
+
+.comicStripLarge2 {
+    max-width: 200px;
+    height: auto;
+}
+
+#gradientsection {
     /* margin:-100px -40px 0 -40px; */
     padding: 30px 0;
-    background: #ffffff; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#333333 10px, #ffffff ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#333333 10px, #ffffff ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#333333 10px, #ffffff ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#333333 10px, #ffffff ); /* Standard syntax */
+    background: #ffffff;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#333333 10px, #ffffff);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333333 10px, #ffffff);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333333 10px, #ffffff);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333333 10px, #ffffff);
+    /* Standard syntax */
 }
 
-#gradSection{
-    height:100px;
-    width:100%; 
+#gradSection {
+    height: 100px;
+    width: 100%;
 }
+
 /**** Cancer Rates Chart ******/
 
-    #cancerRatesChart{
-        /* margin-bottom:75px;
-        margin-right: 100px; */
-        width: 100%;
-        min-height:500px;
-        margin:40px 0 40px 0;
-    }
+#cancerRatesChart {
+    width: 70%;
+    min-height: 400px;
+    margin: 40px 0 40px 0;
+    text-align: center;
+}
 
-    #chart_buttons {
-        margin-top: 100px;
-       
-    }
+.chart_buttonDiv {
+    display: block;
+}
 
-    input.filterButton[type=button] {
-        width: 100px;
-        height: 100px;
-        transition: all 250ms ease;
-        will-change: transition;
-        display: inline-block;
-        text-align: center;
-        cursor: pointer;
-        position: relative;
-        /* font-family: $font; */
-        font-weight: 900;
-    }
-    
-    /* input.filterButton[type=button] {
-        position: relative;
-        display: block;
-        width: 75px;
-        border: none;
-        text-align: center;
-        color: #616161;
-        font-family: Helvetica;
-        font-size: 12px;
-        padding: 10px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    } */
+input {
+    visibility: hidden;
+}
 
-    .lineLabels {
-        font-family: Helvetica;
-        font-size: 18px;
-        letter-spacing: 5px;
-    }
+input:checked+label {
+    background: #8D848C;
+    padding: 5px;
+}
 
+label {
+    width: 100px;
+    height: 20px;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+}
 
-    #cancerTitle,
-    #cancerexplan {
-        margin-left: 150px;
-    }
+.lineLabels {
+    font-family: Helvetica;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
 
-    .axis--x {
-        fill: #616161;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 12px;
-    }
+.axis--x {
+    fill: #616161;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
 
-    .axis--x line,
-    path {
-        stroke: #616161;
-    }
+.axis--x line,
+path {
+    stroke: #616161;
+}
 
-    .axis--y {
-        fill: #616161;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 12px;
-    }
+.axis--y {
+    fill: #616161;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
 
-    .axis--y line {
-        stroke: #616161;
-    }
+.axis--y line {
+    stroke: #616161;
+}
 
-    .axis--y path {
-        stroke: #616161;
-    }
+.axis--y path {
+    stroke: #616161;
+}
 
-    .line {
-        fill: none;
-        stroke-width: 2px;
-    }
+.line {
+    fill: none;
+    stroke-width: 2px;
+}
 
-    #lineChart {
-        background-color: transparent;
-    }
-
+#lineChart {
+    background-color: transparent;
+}
 
 /*------Insured Rates-----*/
 
-    #insuredratesimg, #savingsRatesChartdiv {
-        text-align: center;
-    }
-    #insuredRatesChart{
-        max-width:500px;
-    }
+#insuredratesimg,
+#savingsRatesChartdiv {
+    text-align: center;
+}
 
+#insuredRatesChart {
+    max-width: 500px;
+}
 
 /**** Savings Rates Chart****/
-    #savingsRatesDiv{
-        min-height:400px;
-        text-align: center;
-    }
-    #savingsRatesDiv img {
-        height:100%;
-        width: auto;
-        max-width: 500px;
-    }
 
-    #savingschartTitle {
-        margin: 40px 0px -10px 100px;
-    }
+#savingsRatesDiv {
+    min-height: 400px;
+    text-align: center;
+}
 
-    .savingsDataLabels {
-        font-size: 18px;
-        fill: #ffffff;
-    }
+#savingsRatesDiv img {
+    width: auto;
+    max-width: 500px;
+}
 
-    .axisSavingsX text {
-        font-size: 18px;
-        fill: #ffffff;
-    }
+#savingschartTitle {
+    margin: 40px 0px -10px 100px;
+}
 
-    .legendSavingText {
-        font-size: 18px;
-        fill: #ffffff;
-    }
+.savingsDataLabels {
+    font-size: 18px;
+    fill: #ffffff;
+}
 
-#chemoTreatment, #lostJob_1-5{
+.axisSavingsX text {
+    font-size: 18px;
+    fill: #ffffff;
+}
+
+.legendSavingText {
+    font-size: 18px;
+    fill: #ffffff;
+}
+
+#chemoTreatment {
     display: flex;
     justify-content: center;
 }
-#chemoText{
-    margin:70px 300px 0px 300px;
+
+#chemoText {
+    margin: 70px 300px 0px 300px;
 }
+
 /***sources**/
 
-    #sources{
-        display: flex;
-        justify-content: center;
-        
-    }
-    #sources>p>a{
-        font-size: 16px;
-    }
+#sources {
+    display: flex;
+    justify-content: center;
+}
 
+#sources>p>a {
+    font-size: 16px;
+}
 
 /*****Footer****/
 
-    footer {
-        
-        text-align: center;
-        padding: 25px;
-    }
-    audio{
-        
-        max-width: 100px;
-        height: auto;
-        position: fixed;
-        top: 100%;
-        left:0px;
-        object-fit: inherit;
-    }
+footer {
+    text-align: center;
+    padding: 25px;
+}
+
+audio {
+    max-width: 100px;
+    height: auto;
+    position: fixed;
+    top: 100%;
+    left: 0px;
+    object-fit: inherit;
+}
 
 /*=========================
     Icons
     ================= */
 
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+}
 
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
 
+/* footer social icons */
 
-    ul.social-network {
-        list-style: none;
-        display: inline;
-        margin-left: 0 !important;
-        padding: 0;
-    }
+.social-network a.icoRss:hover {
+    background-color: #F56505;
+}
 
-    ul.social-network li {
-        display: inline;
-        margin: 0 5px;
-    }
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
 
+.social-network a.icoTwitter:hover {
+    background-color: #33ccff;
+}
 
-    /* footer social icons */
+.social-network a.icoGoogle:hover {
+    background-color: #BD3518;
+}
 
-    .social-network a.icoRss:hover {
-        background-color: #F56505;
-    }
+.social-network a.icoVimeo:hover {
+    background-color: #0590B8;
+}
 
-    .social-network a.icoFacebook:hover {
-        background-color: #3B5998;
-    }
+.social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+}
 
-    .social-network a.icoTwitter:hover {
-        background-color: #33ccff;
-    }
+.social-network a.icoRss:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i {
+    color: #fff;
+}
 
-    .social-network a.icoGoogle:hover {
-        background-color: #BD3518;
-    }
+a.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD;
+}
 
-    .social-network a.icoVimeo:hover {
-        background-color: #0590B8;
-    }
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
 
-    .social-network a.icoLinkedin:hover {
-        background-color: #007bb7;
-    }
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+}
 
-    .social-network a.icoRss:hover i,
-    .social-network a.icoFacebook:hover i,
-    .social-network a.icoTwitter:hover i,
-    .social-network a.icoGoogle:hover i,
-    .social-network a.icoVimeo:hover i,
-    .social-network a.icoLinkedin:hover i {
-        color: #fff;
-    }
+.social-circle li a:hover i,
+.triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
 
-    a.socialIcon:hover,
-    .socialHoverClass {
-        color: #44BCDD;
-    }
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
 
-    .social-circle li a {
-        display: inline-block;
-        position: relative;
-        margin: 0 auto 0 auto;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        text-align: center;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    .social-circle li i {
-        margin: 0;
-        line-height: 50px;
-        text-align: center;
-    }
-
-    .social-circle li a:hover i,
-    .triggeredHover {
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -ms--transform: rotate(360deg);
-        transform: rotate(360deg);
-        -webkit-transition: all 0.2s;
-        -moz-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        -ms-transition: all 0.2s;
-        transition: all 0.2s;
-    }
-
-    .social-circle i {
-        color: #fff;
-        -webkit-transition: all 0.8s;
-        -moz-transition: all 0.8s;
-        -o-transition: all 0.8s;
-        -ms-transition: all 0.8s;
-        transition: all 0.8s;
-    }
-
-
-    .footer-copyright {
-        padding: 25px;
-        background-color: transparent;
-    }
+.footer-copyright {
+    padding: 25px;
+    background-color: transparent;
+}
 
 /****Scrolling fanciness***/
-    #copingMechanismslist{
-        height:auto;
-        /* width: 100%; */
-        margin-left:100px;
-        margin-right:100px;
-        overflow: hidden;
-    }
-    .element{
-        display: none;
-        font-size: 24px;
-    }
 
+#copingMechanismslist {
+    height: auto;
+    /* width: 100%; */
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: hidden;
+}
 
+.element {
+    display: none;
+    font-size: 24px;
+}

@@ -17,7 +17,8 @@
     <script src="https://use.fontawesome.com/ab12422872.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'></script>
+
 
 </head>
 
@@ -80,9 +81,11 @@
         </div>
 
         <div class='content'>
-            <button class='navButton'>
-                <i class='material-icons'>menu</i>
-            </button>
+            <div class="navButton">
+                <button>
+                    <i class='material-icons'>menu</i>
+                </button>
+            </div>
 
             <div class="container-column" id="introduction">
                 <p class="articleText">
@@ -117,17 +120,21 @@
                     to inhibit healing. Employer tied health insurance coupled with skyrocketing costs of medicine lead to
                     a toxic financial situation for patients and their families.
                 </p>
-                <div class="leftImageContainer">
+                <div class="articleText">
+
                     <img src='media/couple.png' id='karinaAndtom'>
-                    <p class=" articleText">
-                        Karina and Tom live in Florida and have two kids ages 10 and 14. Karina is 45 and works part time in administration at a
-                        Law Firm. The other half of her time she's taking care of her kids, volunteering with local organizations
-                        and caring for her aging mother.
-                        <br>
-                        <br>Tom is 43 years old and works as an engineer at a construction company. Construction is down lately
-                        and he's been worried he may loose his job. His company just had company-wide paycuts due to the
-                        downturn. He's been thinking of trying to find another job.
-                    </p>
+
+                    <div>
+                        <p>
+                            Karina and Tom live in Florida and have two kids ages 10 and 14. Karina is 45 and works part time in administration at a
+                            Law Firm. The other half of her time she's taking care of her kids, volunteering with local organizations
+                            and caring for her aging mother.
+                            <br>
+                            <br>Tom is 43 years old and works as an engineer at a construction company. Construction is down
+                            lately and he's been worried he may loose his job. His company just had company-wide paycuts
+                            due to the downturn. He's been thinking of trying to find another job.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -147,6 +154,7 @@
             <div id="diagnosis">
                 <h1 class='sectionTitle' style='color:#ffffff'>Diagnosis</h1>
                 <div class="container-horizontal">
+
                     <img src='comic_strip_files/docOffice_strip1.png'>
                     <p class='articleText'>Breast Cancer rates among older women fell in the early 2000s but have lately started to rise again.
                         <br> Rates for younger women have stayed unfortunately level. At 45 years old, Karina is like 0.1% of
@@ -155,13 +163,25 @@
 
                 <div class="container-horizontal">
                     <div id="cancerRatesChart">
+                        <p style='margin-bottom:0px'>Cancer Rates By Age Group in the US (per 100,000 ppl)</p>
                         <svg id='lineChart'></svg>
                     </div>
 
-                    <div class="chart_buttons">
-                        <input type="radio" class='filterButton' value=1 label='Over 50' onclick='defineCancerRatesData(1)'>
-                        <input type="radio" class='filterButton' value=2 label='Under 50' onclick='defineCancerRatesData(2)'>
-                        <input type="radio" id='allAges' class='filterButton' value=0 label='All Ages' onclick='defineCancerRatesData(0)'>
+                    <div id="chart_buttons">
+                        <div class='chart_buttonDiv'>
+                            <input type="radio" name='filterButton' value=1 id='Over50' onclick='defineCancerRatesData(1)'>
+                            <label for="Over50">Over 50</label>
+                        </div>
+                        <br>
+                        <div class='chart_buttonDiv'>
+                            <input type="radio" name='filterButton' value=2 id='Under50' onclick='defineCancerRatesData(2)'>
+                            <label for="Under50">Under 50</label>
+                        </div>
+                        <br>
+                        <div class='chart_buttonDiv'>
+                            <input type="radio" name='filterButton' value=0 id='allAges' onclick='defineCancerRatesData(0)'>
+                            <label for="allAges">All Ages</label>
+                        </div>
                     </div>
                 </div>
                 <!--end Cancer rates chart div-->
@@ -295,9 +315,9 @@
             <!--end diagnosis div-->
             <div id='FinancialAssistance'>
                 <h1 class='sectionTitle'>Financial Assistance</h1>
-                <h1 class='chartTitle'>Meeting with the Councelor</h1>
+                <h1 class='chartTitle'>Meeting with the Counselor</h1>
 
-                <p class='articleText'>Many hospitals have a councelor who meets with patients to help them deal with the emotional and financial
+                <p class='articleText'>Many hospitals have a Counselor who meets with patients to help them deal with the emotional and financial
                     burdens of their cancer treatment.</p>
 
                 <div class='comicstrip'>
@@ -323,7 +343,7 @@
                 </div>
 
                 <h1 class='chartTitle'>Charitable Donations</h1>
-                <p class='articleText'>Councelors help patients find charitable donations- a lifeline for many patients. Even those with insurance,
+                <p class='articleText'>Counselors help patients find charitable donations- a lifeline for many patients. Even those with insurance,
                     often need help to cover the added costs of the disease like extra childcare, help with housekeeping,
                     lost wages for time they had to take off work, etc.
                 </p>
@@ -340,7 +360,7 @@
                 </div>
 
 
-                <p class='articleText' id='chemoText'> While receving her chemo treatment, Karina must use the time to fill out applications to charitable organizations
+                <p class='articleText' id='chemoText'> While receiving her chemo treatment, Karina must use the time to fill out applications to charitable organizations
                     for financial aid.
                 </p>
                 <div id="chemoTreatment">
@@ -358,7 +378,7 @@
                     costs, especially after year one of treatment.
                 </p>
                 <div id='costofMedicine'>
-                    <img src='media/pharmaLayout-sized.png' width=100%>
+                    <img src='media/pharmaLayout-sized.png' width=100% download>
                 </div>
 
             </div>
@@ -379,7 +399,7 @@
                         <div>
                             <img src='comic_strip_files/lostJob_1-4.png'>
                         </div>
-                        <div id='lostJob_1-5'>
+                        <div>
                             <img src='comic_strip_files/lostJob_1-5.png'>
                         </div>
                     </div>
@@ -473,6 +493,28 @@
                     </div>
                 </div>
                 <!--End Coping Mechanisms-->
+                <div id="outcome" class='articleText'>
+                    <h1 class='sectionTitle'> So, what happens to Karina and Tom?</h1>
+                    
+                        <img src='media/couple.png' id='karinaAndtom'>
+        
+
+                            <p> Karina and Tom are a fictional couple, but they are based on real women and their families.
+                                Millions of women and their families face this question every day. Do they go into
+                                debt? Do they sell their house? Do they declare bankruptcy?
+                                <br>
+                                <br>
+                                <span class="accent2">What would you do?</span>
+                                <br>
+                                <br> Karina will survive her bout with cancer. She will recover physically but the cancer
+                                could still come back any time. For a very long time, as long as their insurance
+                                is tied to their jobs, Karina and Tom's careers will be inextricably linked to the
+                                need for health insurance. As long as the ever increasing costs of pharmaceuticals
+                                are passed onto the insurance consumer, Karina and Tom will not likely be able to
+                                afford insurance on the private market. </p>
+                        </div>
+                  <!--end Outcome-->
+
                 <div id='solutions'>
 
 
@@ -610,17 +652,18 @@
     <!--end master div-->
 
 
+
+
+    <script type='text/javascript' src="https://d3js.org/d3.v4.min.js"></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+    <script type='text/javascript' src='js/main.js'></script>
+    <script type='text/javascript' src='js/BCratesChart.js'></script>
+    <script type='text/javascript' src='js/scrollTrigger.js'></script>
+    <script type='text/javascript' src='js/budget.js'></script>
+
 </body>
-
-
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'></script>
-<script type='text/javascript' src='main.js'></script>
-<script type='text/javascript' src='BCratesChart.js'></script>
-<script type='text/javascript' src='scrollTrigger.js'></script>
-<!-- <script type='text/javascript' src='savingsRatesChart.js'></script> -->
-<script type='text/javascript' src='budget.js'></script>
 
 </html>
