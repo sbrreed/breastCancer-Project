@@ -119,13 +119,12 @@ var budget_chart1 = new Chart(bar_ctx, {
         tooltips: {
             mode: 'nearest',
             callbacks: {
+                title: function(tooltipItem, data) {
+                    return data['datasets'][tooltipItem[0]['datasetIndex']]['title'];
+                },
                 label: function (tooltipItem, data) {
                     return "$" + tooltipItem.xLabel.toString();
-                },
-                title: function(tooltipItem, data) {
-                    return tooltipItem['index'].title;
                 }
-                
             }
         },
         scales: {
