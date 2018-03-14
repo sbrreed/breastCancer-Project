@@ -28,7 +28,7 @@
         <div id='header'>
             <div style="flex:1"></div>
             <div style="flex:10" id="imgDiv">
-                <img src="media/CostofCancer3.png" class="FullSizeimage">
+                <img src="media/CostofCancer3.png" class="FullSizeimage" alt='Cost of Cancer logo'>
             </div>
             <div style="flex:1"></div>
         </div>
@@ -39,7 +39,7 @@
                     <a href='http://www.nbcnews.com/id/51893912/ns/health-cancer/t/cancer-increases-bankruptcy-risk-even-insured/#.Wh75y0trzOQ'
                         title='NBC News' class='accent2' target="_blank">2.65 times</a> increased risk of bankruptcy. How can a person heal effectively when they're worried how
                     they'll pay for their treatment or if they're going to
-                    <span class='accent2'>loose their health insurance?</span>
+                    <span class='accent2'>lose their health insurance?</span>
                     <br>
                     <br> And if they survive the cancer but end up broke, are they really healed?
                 </p>
@@ -90,7 +90,7 @@
             <div class="container-column" id="introduction">
                 <p class="articleText">
                     The financial impacts associated with breast cancer, and other cancers alike, effect all patients but are especially impactful
-                    on the lower middle class. They are a portion of the population who earn to much to be covered by medicaid
+                    on the lower middle class. They are a portion of the population who earn too much to be covered by medicaid
                     but don't earn enough to have the savings necessary to weather the costs and financial losses associated
                     with a drawn out treatment regimen. With heath insurance tied to their jobs, a job loss during treatment-
                     either related to the illness or simply bad timing- can cause a financial spiral into bankruptcy.
@@ -100,29 +100,38 @@
                     coupled with lost wages from having to take time off for treatment and rest, can quickly deplete a family's
                     meager savings to zero.
                 </p>
-                <div class="rightImageContainer">
+
+                <div>
+                    <div class='chemoBill'>
+                        <img src='media/chemoBill-small.png' alt="Image of medical bill totaling $22,576">
+                        <br>This bill was sent to me by a woman I interviewed for this article. It's for just three weeks of
+                        her treatment. While the bottom line indicates that she's only responsible for $17.65, were her husband
+                        to lose his employer sponsored insurance, they would be responsible for the entire amount.
+                    </div>
+
+
+
+
                     <p class=" articleText">
-                        <img src='media/chemoBill-small.png' class='chemoBill'> The skyrocketing costs of pharmaceuticals are a major culprit in the financial burden to the patient.
-                        Cancer pharmaceuticals are getting steadily more expensive but the improvements in life expectancy
-                        are not nearly keeping pace. In a study of 71 drugs to treat solid tumors the median improvement
-                        in progression free survival was just 2.3 months. Pharmaceutical companies claim that they need the
-                        extra income for R&D yet regularly pocket double digit profits greater than the finance industry.
-                        The money they do reinvest in the company usually ends up more in marketing budgets than R&D budgets.
-                        Pharmacuetical companies, instead, rely on government funding for R&D. The image shown was sent to
-                        me by a woman I interviewed for this article. It is for just three weeks of her treatment. While
-                        the bottom line indicates that she's only responsible for $17.65, were her husband to loose his employer
-                        sponsored insurance, they would be responsible for the entire amount.
+                        The skyrocketing costs of pharmaceuticals are a major culprit in the financial burden to the patient. Cancer pharmaceuticals
+                        are getting steadily more expensive but the improvements in life expectancy are not nearly keeping
+                        pace. In a study of 71 drugs to treat solid tumors the median improvement in progression free survival
+                        was just 2.3 months. Pharmaceutical companies claim that they need the extra income for R&D yet regularly
+                        pocket double digit profits greater than the finance industry. The money they do reinvest in the
+                        company usually ends up more in marketing budgets than R&D budgets. Pharmacuetical companies, instead,
+                        rely on government funding for R&D.
 
                     </p>
+
+                    <p class="articleText">
+                        The fear and stress associated with the financial impacts of the disease affect nearly all patients. Stress is well known
+                        to inhibit healing. Employer tied health insurance coupled with skyrocketing costs of medicine lead
+                        to a toxic financial situation for patients and their families.
+                    </p>
                 </div>
-                <p class="articleText">
-                    The fear and stress associated with the financial impacts of the disease affect nearly all patients. Stress is well known
-                    to inhibit healing. Employer tied health insurance coupled with skyrocketing costs of medicine lead to
-                    a toxic financial situation for patients and their families.
-                </p>
                 <div class="articleText">
 
-                    <img src='media/couple.png' id='karinaAndtom'>
+                    <img src='media/couple.png' id='karinaAndtom' alt="Image of our protagonist couple named Karina and Tom">
 
                     <div>
                         <p>
@@ -140,11 +149,11 @@
 
             <div class='container-horizontal budgetChartwrapper'>
                 <div style='max-width:500px;'>
-                    <p class="articleText">This is Karina and Tom's pre-illness budget breakdown. Tom makes a good wage and they have managed to
+                    <p class="articleText" style="margin:30px;">This is Karina and Tom's pre-illness budget breakdown. Tom makes a good wage and they have managed to
                         keep their expenses low. They tend to spend their remaining money on travel and leisure activities.</p>
                 </div>
                 <div class="budgetChart-div">
-                    <canvas class="budgetChart" id='budgetChart1'></canvas>
+                    <canvas id='budgetChart1'></canvas>
                     <p class='chartSource'>Source: http://www.epi.org/resources/budget/ (Jacksonville, FL)</p>
                 </div>
 
@@ -155,10 +164,10 @@
                 <h1 class='sectionTitle' style='color:#ffffff'>Diagnosis</h1>
                 <div class="container-horizontal">
 
-                    <img src='comic_strip_files/docOffice_strip1.png'>
+                    <img src='comic_strip_files/docOffice_strip1.png' alt="Karina and Tom meeting with her doctor. He tells them he has found Cancer in her breast">
                     <p class='articleText'>Breast Cancer rates among older women fell in the early 2000s but have lately started to rise again.
-                        <br> Rates for younger women have stayed unfortunately level. At 45 years old, Karina is like 0.1% of
-                        all American women (123 per 100,000).</p>
+                        <br> Rates for younger women have stayed unfortunately level. At 45 years old, 123 out of 100,000 women
+                        will develop breast cancer.
                 </div>
 
                 <div class="container-horizontal">
@@ -187,16 +196,16 @@
                 <!--end Cancer rates chart div-->
                 <div class='comicstrip'>
                     <div>
-                        <img src='comic_strip_files/docOffice_strip2.1.png'>
+                        <img src='comic_strip_files/docOffice_strip2.1.png' alt="Tom says: Doctor, of course we'll do all that's necessary but money is tight right now. Do you have any idea how much this si going to cost?">
                     </div>
                     <div class="comicStripLarge">
-                        <img src='comic_strip_files/docOffice_strip2.2.png'>
+                        <img src='comic_strip_files/docOffice_strip2.2.png' alt="Karina looks distraught">
                     </div>
                     <div>
-                        <img src='comic_strip_files/docOffice_strip2.4.png'>
+                        <img src='comic_strip_files/docOffice_strip2.4.png' alt="The Doctor says: You'll have to talk with our finance office down the hall. You have insurance, don't you?">
                     </div>
                     <div>
-                        <img src='comic_strip_files/docOffice_strip2.3.png'>
+                        <img src='comic_strip_files/docOffice_strip2.3.png' alt="The Doctor says: I don't deal with that sort of stuff">
                     </div>
                 </div>
                 <!--end docOffice comic strip-->
@@ -214,7 +223,7 @@
                     </p>
                     <div id='insuredratesimg'>
                         <p>Insurance Rates Amongst Americans (2016)</p>
-                        <img id='insuredRatesChart' src='media/insuredRatesChart.png'>
+                        <img id='insuredRatesChart' src='media/insuredRatesChart.png' alt="Chart of American rates of insurance by type. 49% are Employer Insured">
                         <p class='chartSource'>source: Kaiser Family Foundation</p>
                     </div>
                     <p class="articleText" style='margin-bottom:10px'>
@@ -296,7 +305,7 @@
                     <div id="savingsRatesChartdiv">
                         <p>American Savings Rates</p>
                         <div id="savingsRatesDiv">
-                            <img src='media/savingsRates_lined.png'>
+                            <img src='media/savingsRates_lined.png' alt="Chart of American's savings rates by amount of savings. Karina and Tom fall in the category of less than $1000.">
                         </div>
                         <p class='chartSource'>Source:
                             <a class="aDark" href='https://www.gobankingrates.com/saving-money/half-americans-less-savings-2017/' target="_blank" class='chartSource'>
@@ -322,13 +331,13 @@
 
                 <div class='comicstrip'>
                     <div>
-                        <img src='comic_strip_files/councelorsOffice_1-1.png'>
+                        <img src='comic_strip_files/councelorsOffice_1-1.png' alt="The Counselor says: Thank you for coming in today. My job is to help you navigate the financial aspects of your treatment. Do you have health insurance?">
                     </div>
                     <div>
-                        <img src='comic_strip_files/councelorsOffice_1-2.png'>
+                        <img src='comic_strip_files/councelorsOffice_1-2.png' alt="Karina says: We have insurance through Tom's work. I only work part time so I don't get insurance through my work. Tom says: But work has been down lately and I've been thinking of moving on.">
                     </div>
                     <div>
-                        <img src='comic_strip_files/councelorsOffice_1-3.png'>
+                        <img src='comic_strip_files/councelorsOffice_1-3.png' alt="The Counselor says: You're going to need to do all you can to keep your jobs. You're going to need the insurance and the income.">
                     </div>
                 </div>
 
@@ -344,18 +353,18 @@
 
                 <h1 class='chartTitle'>Charitable Donations</h1>
                 <p class='articleText'>Counselors help patients find charitable donations- a lifeline for many patients. Even those with insurance,
-                    often need help to cover the added costs of the disease like extra childcare, help with housekeeping,
-                    lost wages for time they had to take off work, etc.
+                    often need help to cover the added costs of the disease, that are not covered by insurance, like extra
+                    childcare, help with housekeeping, lost wages for time they had to take off work, etc.
                 </p>
                 <div class='comicstrip'>
                     <div>
-                        <img src='comic_strip_files/councelorsOffice_2-1.png'>
+                        <img src='comic_strip_files/councelorsOffice_2-1.png' alt="The Counselor says: There are charities that my be able to help you with your medical and other expenses. You'll need to fill out these forms to apply for them.">
                     </div>
                     <div class='comicStripLarge2'>
-                        <img src='comic_strip_files/councelorsOffice_2-2.png'>
+                        <img src='comic_strip_files/councelorsOffice_2-2.png' alt="Karina says: I don't have a lot of time to be filling out forms right now. What with all the doctors appointments and tests I have to go to.">
                     </div>
                     <div>
-                        <img src='comic_strip_files/councelorsOffice_2-3.png'>
+                        <img src='comic_strip_files/councelorsOffice_2-3.png' alt="The Counselor says: Well you're going to want to find the time to fill them all out. You're going to need them.">
                     </div>
                 </div>
 
@@ -378,7 +387,9 @@
                     costs, especially after year one of treatment.
                 </p>
                 <div id='costofMedicine'>
-                    <img src='media/pharmaLayout-sized.png' width=100% download>
+                    <a href='media/pharmaLayout-sized.png' download>
+                        <img src='media/pharmaLayout-sized.png' width=100% alt="Pharmaceutical companies have exploited their use of the patent laws to raise prices on the cancer fighting drugs people need. They claim they need the money for various reasons but all can be easily disputed.">
+                    </a>
                 </div>
 
             </div>
@@ -388,19 +399,19 @@
                     <h1 class='sectionTitle' style='color:#ffffff'>Financial Coping Mechanisms</h1>
                     <div class='comicstrip'>
                         <div>
-                            <img src='comic_strip_files/lostJob_1-1.png'>
+                            <img src='comic_strip_files/lostJob_1-1.png' alt="Karina says: I'm just to tired these day, Tom.">
                         </div>
                         <div>
-                            <img src='comic_strip_files/lostJob_1-2.png'>
+                            <img src='comic_strip_files/lostJob_1-2.png' alt="Tom says: I have some bad news, Karina. You know work has been really slow lately...">
                         </div>
                         <div>
-                            <img src='comic_strip_files/lostJob_1-3_test.png'>
+                            <img src='comic_strip_files/lostJob_1-3_test.png' alt="Tom says: They laid me off today, Karina. Karina says: Laid you off! HOw could they?! What are we going to do about our health insurance?">
                         </div>
                         <div>
-                            <img src='comic_strip_files/lostJob_1-4.png'>
+                            <img src='comic_strip_files/lostJob_1-4.png' alt="Tom says: They said I could take the Cobra insurance. Karina says: It's so expensive! We can't afford that!">
                         </div>
                         <div>
-                            <img src='comic_strip_files/lostJob_1-5.png'>
+                            <img src='comic_strip_files/lostJob_1-5.png' alt="Tom says: I don't know what we're going to do yet, but we'll make something work. Karina thinks: This is jus too much..">
                         </div>
                     </div>
 
@@ -495,25 +506,24 @@
                 <!--End Coping Mechanisms-->
                 <div id="outcome" class='articleText'>
                     <h1 class='sectionTitle'> So, what happens to Karina and Tom?</h1>
-                    
-                        <img src='media/couple.png' id='karinaAndtom'>
-        
 
-                            <p> Karina and Tom are a fictional couple, but they are based on real women and their families.
-                                Millions of women and their families face this question every day. Do they go into
-                                debt? Do they sell their house? Do they declare bankruptcy?
-                                <br>
-                                <br>
-                                <span class="accent2">What would you do?</span>
-                                <br>
-                                <br> Karina will survive her bout with cancer. She will recover physically but the cancer
-                                could still come back any time. For a very long time, as long as their insurance
-                                is tied to their jobs, Karina and Tom's careers will be inextricably linked to the
-                                need for health insurance. As long as the ever increasing costs of pharmaceuticals
-                                are passed onto the insurance consumer, Karina and Tom will not likely be able to
-                                afford insurance on the private market. </p>
-                        </div>
-                  <!--end Outcome-->
+                    <img src='media/couple.png' id='karinaAndtom' alt="drawing of Karina and Tom">
+
+
+                    <p> Karina and Tom are a fictional couple, but they are based on real women and their families. Millions
+                        of women and their families face this question every day. Do they go into debt? Do they sell their
+                        house? Do they declare bankruptcy?
+                        <br>
+                        <br>
+                        <span class="accent2">What would you do?</span>
+                        <br>
+                        <br> Karina will survive her bout with cancer. She will recover physically but the cancer could still
+                        come back any time. As long as their insurance is tied to their jobs, Karina and Tom's careers will
+                        be inextricably linked to the need for health insurance. As long as the ever increasing costs of
+                        pharmaceuticals are passed onto the insurance consumer, Karina and Tom will not likely be able to
+                        afford insurance on the private market. </p>
+                </div>
+                <!--end Outcome-->
 
                 <div id='solutions'>
 
@@ -564,7 +574,12 @@
                             citizens. All citizens are, therefore, guaranteed the right to healthcare. This would allow the
                             the government to negotiate with pharmaceutical companies as one large block instead of individual
                             health insurers negotiating piecemeal. The government already negotiates with the pharmaceutical
-                            companies through Medicaid but at a much smaller volume.
+                            companies through Medicaid but at a much smaller volume. Pharmaceuticals are
+                            <a class="aDark"
+                                href='https://jamanetwork.com/journals/jama/article-abstract/2674647?redirect=true' target="_blank"
+                                title='JAMA online'>
+                                significantly more expensive </a> in the United States than in other countries where healthcare
+                            is universal.
                             <br>
                             <br> Learn more about universal healthcare
                             <a class="aDark" href='http://www.healthpaconline.net/universal-health-care.htm' target="_blank" title='HealthPAConline.net'>here</a>
