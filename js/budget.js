@@ -13,11 +13,13 @@ var expenses = [{
     'Other Necessities': 829
 }];
 Chart.defaults.global.defaultFontFamily = "'Oswald', sans-serif";
-Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontSize = 20;
+
 Chart.defaults.global.defaultFontStyle = "lighter";
 
 //budget Chart 1
 var bar_ctx = document.getElementById('budgetChart1');
+bar_ctx.height=300;
 var budget_chart1 = new Chart(bar_ctx, {
     type: 'horizontalBar',
     data: {
@@ -105,6 +107,7 @@ var budget_chart1 = new Chart(bar_ctx, {
         ]
     },
     options: {
+        maintainAspectRatio:true,
         responsive: false,
         legend: false,
         animation: {
@@ -119,12 +122,13 @@ var budget_chart1 = new Chart(bar_ctx, {
         tooltips: {
             mode: 'nearest',
             callbacks: {
-                title: function(tooltipItem, data) {
-                    return data['datasets'][tooltipItem[0]['datasetIndex']]['title'];
-                },
                 label: function (tooltipItem, data) {
                     return "$" + tooltipItem.xLabel.toString();
+                },
+                title: function(tooltipItem, data) {
+                    return data['datasets'][tooltipItem[0]['datasetIndex']]['title'];
                 }
+                
             }
         },
         scales: {
